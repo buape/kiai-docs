@@ -1,0 +1,14 @@
+{
+  "index": "Introduction",
+  "another": "Another Page",
+  "advanced": "Advanced (A Folder)",
+  "home": {
+    "title": "Main Site",
+    "type": "page",
+    "href": "https://kiaibot.com"
+  },
+  "about": {
+    "title": "About",
+    "type": "page"
+  }
+}
