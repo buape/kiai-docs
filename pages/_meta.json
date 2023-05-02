@@ -1,4 +1,9 @@
 {
+	"main-site": {
+		"type": "page",
+		"title": "Main Site",
+		"href": "https://kiaibot.com"
+	},
 	"index": "Introduction",
 	"getting-started": "Getting Started",
 	"features": "Features",
