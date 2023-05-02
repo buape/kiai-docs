@@ -1,7 +1,7 @@
 {
 	"name": "kiai-docs",
 	"version": "0.0.0",
-	"description": "Documentation for Kia using Nextra",
+	"description": "Documentation for Kiai using Nextra",
 	"private": "true",
 	"scripts": {
 		"dev": "next dev",
@@ -10,14 +10,14 @@
 	},
 	"license": "MIT",
 	"dependencies": {
-		"next": "^13.0.6",
-		"nextra": "latest",
-		"nextra-theme-docs": "latest",
+		"next": "^13.3.4",
+		"nextra": "^2.4.2",
+		"nextra-theme-docs": "^2.4.2",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
 		"@types/node": "18.16.3",
-		"typescript": "^5.0.0"
+		"typescript": "^5.0.4"
 	}
 }
