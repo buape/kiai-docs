@@ -1,0 +1,35 @@
+# Kiai API
+
+Kiai provides a public API for developers to use to extend the functionality of the bot.
+
+## API Endpoints
+
+The full list of endpoints can be found here:
+
+https://api.kiaibot.com/docs
+
+## Authentication
+
+Authentication in Kiai works on the basis of "Applications". These function similarly to Discord bot applications, in that you need to authorize them to each server with a set of permissions, using the [/application](/commands/application) command.
+
+## Permissions
+
+Permissions are granted to applications, and are used to determine what actions an application can perform.
+These are set when authorizing an application, and can be changed at any time using the [/application](/commands/application) command by reauthorizing the application.
+
+Permissions are stored in a variable-length integer, and are calculated using bitwise operations.
+
+### List of Permissions:
+
+| Permission Name | Description                          | Value              |
+| --------------- | ------------------------------------ | ------------------ |
+| Levels          | View and edit all levels and XP      | 0x00001 (1 \<\< 0) |
+| Multipliers     | View and edit multipliers            | 0x00010 (1 \<\< 1) |
+| Export          | Export data from your guild          | 0x00100 (1 \<\< 2) |
+| Blacklist       | View and edit the server's blacklist | 0x01000 (1 \<\< 3) |
+| Rewards         | View and edit the server's rewards   | 0x10000 (1 \<\< 4) |
+
+## Rate Limits
+
+Every application has a 60 request per minute ratelimit. If you exceed this, you will be temporarily banned from making requests to the API.
+Upon request, this can be increased for your application if you have a legitimate use case for it.
