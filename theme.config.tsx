@@ -1,9 +1,9 @@
 import React from "react";
 import { DocsThemeConfig, useConfig } from "nextra-theme-docs";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const config: DocsThemeConfig = {
-	logo: <span>Kiai Documentation</span>,
 	project: {
 		link: "https://github.com/buape/kiai-docs",
 	},
@@ -46,7 +46,19 @@ const config: DocsThemeConfig = {
 			</>
 		);
 	},
-	logoLink: "https://raw.githubusercontent.com/buape/resources/main/kiai.png",
+	logo: (
+		<>
+		<Image
+			src="/kiai.png"
+			alt="Kiai Logo"
+			width={25}
+			height={25}
+		/>
+		<span style={{ marginLeft: '.4em', fontWeight: 800 }}>
+			Kiai Documentation
+		</span>
+		</>
+	),
 	
 };
 
