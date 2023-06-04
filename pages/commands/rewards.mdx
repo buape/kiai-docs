@@ -5,7 +5,7 @@
 ```
 /rewards list
 /rewards remove <reward>
-/rewards add role <role> <level> <add or remove role>
+/rewards add role <role> <level> <add or remove role> [temporary_length]
 /rewards add message <message> <level> [channel]
 /rewards add money <amount> <level> <bank>
 ```
@@ -18,3 +18,6 @@ This command is available to users with the Manage Server permission.
 
 The rewards command allows you to set up rewards for your server. These rewards can be roles, messages, or money in Unbelievaboat.
 The bot will automatically give these rewards to users when they reach the specified level.
+
+You also have the option of setting a length of time that the role is added or removed before the bot will reverse it again.\
+This can be used in, for example, setups where you want a level to have a temporary 1 hour [XP multiplier](/commands/multiplier) through a role.
