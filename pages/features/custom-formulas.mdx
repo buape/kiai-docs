@@ -1,0 +1,7 @@
+# Custom Formulas
+
+Kiai allows server administrators to set custom XP formulas that Kiai will use to calculate the amount of XP required for a certain level. 
+
+By default, the XP formula is `12 * (level * level) + level * 12`. This means that when Kiai is calculating how much XP is needed for level 10 for example, it will calculate `12 * (10 * 10) + 10 * 12` which is `1320`. This means that level 10 requires 1320 XP to reach. 
+
+You can change this formula to whatever you want using the `/custom-formula` command. Custom formulas must include the `level` placeholder which will be replaced. For more information on the `/custom-formula` command, see the Commands section.
