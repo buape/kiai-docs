@@ -28,10 +28,19 @@ Permissions are stored in a variable-length integer, and are calculated using bi
 | Levels          | View and edit all levels and XP      | 0x00001 (1 \<\< 0) |
 | Multipliers     | View and edit multipliers            | 0x00010 (1 \<\< 1) |
 | Export          | Export data from your guild          | 0x00100 (1 \<\< 2) |
-| Blacklist       | View and edit the server's blacklist | 0x01000 (1 \<\< 3) |
+| Denylist        | View and edit the server's denylist  | 0x01000 (1 \<\< 3) |
 | Rewards         | View and edit the server's rewards   | 0x10000 (1 \<\< 4) |
 
 ## Rate Limits
 
 Every application has a 60 request per minute ratelimit. If you exceed this, you will be temporarily banned from making requests to the API.
 Upon request, this can be increased for your application if you have a legitimate use case for it.
+
+## Obtaining a Token
+
+You can get a token to use for your application by joining our [support server](https://go.buape.com/discord) and opening a ticket there.
+
+You will need to provide the following:
+
+- A unique ID (typically your bot's ID)
+- An application name
