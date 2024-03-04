@@ -3,15 +3,37 @@
 ## Syntax
 
 ```
-/settings guild
+/settings server
 /settings user
 ```
 
 ## Permissions
 
-The /settings guild command is available to users with the Manage Server permission.
+The /settings server command is available to users with the Manage Server permission.
 The /settings user command is available for everyone.
 
 ## Description
 
 The /settings command allows you to change the settings of the bot for your server or for yourself.
+
+## Detailed setting explanations
+
+Below you can find additional descriptions and clarification for settings that may not be clear to understand.
+
+### Stack Role Rewards Option
+
+In the settings command, under "Rewards and Denylist," you have the option to stack role rewards.
+
+When this setting is enabled, if a user levels up, they will retain their previous role rewards. Otherwise, their last role reward role will be removed.
+
+#### Example
+
+If `@john` is Level 9 and already has a reward role for Level 5, with the setting enabled, the Level 5 role reward will be preserved in his role list after reaching the Level 10 reward role. If the setting is disabled, the Level 5 reward role will be removed.
+
+### XP Decay Interval
+
+This setting determines how frequently Kiai should execute XP decay in your server. When XP decay runs, the specified amount of XP set in the "XP Decay Amount" setting (located in the "XP Decay" category) will be deducted.
+
+#### Example
+
+If you've configured your XP decay interval to 3 days and set the XP decay amount to 100, then 100 XP will be deducted from all members every 3 days.
