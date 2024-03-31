@@ -1,5 +1,7 @@
 # Kiai Documentation
 
+test commit
+
 This is the public documentation for Kiai, created with [Nextra](https://nextra.site).
 
 [**View Site**](https://docs.kiaibot.com)
