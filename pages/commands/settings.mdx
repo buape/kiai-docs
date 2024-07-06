@@ -35,3 +35,15 @@ This setting determines how frequently Kiai should execute XP decay in your serv
 #### Example
 
 If you've configured your XP decay interval to 3 days and set the XP decay amount to 100, then 100 XP will be deducted from all members every 3 days.
+
+### XP Drop Interval (Minimum and Maximum)
+
+The minimum and maximum interval settings determine how often XP drops can happen in your server. The minimum interval is the shortest amount of time that must pass before an XP drop can occur, while the maximum interval is the longest amount of time that can pass before an XP drop occurs.
+
+Kiai checks whether an XP drop should be sent every time a message is sent in your server. If the minimum interval has passed since the last XP drop, Kiai will randomly determine whether to send an XP drop based on the minimum and maximum interval settings.
+
+Kiai will not send an XP drop regardless of the interval settings if no messages have been sent since the last XP drop.
+
+####Example
+
+If you've configureed your minimum interval to be 10 minutes and your maximum interval to be 1 hour, Kiai will choose a random time between 10 minutes and 1 hour and then check if that amount of time has passed since the last XP drop. If it has, Kiai will send an XP drop. If not, Kiai will wait until the next message is sent to check again.
