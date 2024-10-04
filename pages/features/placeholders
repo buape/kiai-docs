@@ -1,0 +1,32 @@
+# Placeholders
+
+Kiai has a set of placeholders that can be used in several places, such as Level Up messages, XP streak messages, and XP drops.
+
+### List of Placeholders:
+
+| Placeholder Name            | Example                                                                                    | Notes                                                                  |
+| --------------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
+| {guild.id}                  | 744282929684938844                                                                         |                                                                        |
+| {guild.name}                | View and edit multipliers                                                                  |                                                                        |
+| {guild.icon}                | https://cdn.discordapp.com/icons/744282929684938844/b0fb371b25e6689eff94692c63c0f7a5.png   |                                                                        |
+| {guild.owner}               | <@439223656200273932>                                                                      |                                                                        |
+| {guild.owner.id}            | 439223656200273932                                                                         |                                                                        |
+| {user}                      | <@439223656200273932>                                                                      |                                                                        |
+| {user.mention}              | <@439223656200273932>                                                                      |                                                                        |
+| {user.id}                   | 439223656200273932                                                                         |                                                                        |
+| {user.tag}                  | 4shadowed                                                                                  |                                                                        |
+| {user.displayName}          | Shadow                                                                                     |                                                                        |
+| {user.discriminator}        | 0                                                                                          | Discriminators are deprecated in Discord, but added here just in case. |
+| {user.color}                | #FF8D00                                                                                    |                                                                        |
+| {user.avatar}               | https://cdn.discordapp.com/avatars/439223656200273932/b0fb371b25e6689eff94692c63c0f7a5.png |                                                                        |
+| {xp}                        | 100                                                                                        |                                                                        |
+| {level}                     | 10                                                                                         |                                                                        |
+| {rewards.roles.added}       | <@&439223656200273932>                                                                     |                                                                        |
+| {rewards.roles.removed}     | <@&439223656200273932>                                                                     |                                                                        |
+| {rewards.roles.added.ids}   | 439223656200273932                                                                         |                                                                        |
+| {rewards.roles.removed.ids} | 439223656200273932                                                                         |                                                                        |
+| {rewards.money}             | 100                                                                                        |                                                                        |
+| {rewards.money.total}       | 100                                                                                        |                                                                        |
+| {rewards.money.bank}        | 100                                                                                        |                                                                        |
+| {rewards.money.cash}        | 100                                                                                        |                                                                        |
+
