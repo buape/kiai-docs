@@ -8,7 +8,7 @@ const config: DocsThemeConfig = {
 		link: "https://github.com/buape/kiai-docs",
 	},
 	chat: {
-		link: "https://go.buape.com/discord",
+		link: "https://discord.gg/v6YJp5PSd5",
 	},
 	docsRepositoryBase: "https://github.com/buape/kiai-docs/tree/main",
 	footer: {
