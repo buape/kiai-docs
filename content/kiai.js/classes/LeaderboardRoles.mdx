@@ -10,17 +10,17 @@ title: LeaderboardRoles
 
 ### new LeaderboardRoles()
 
-> **new LeaderboardRoles**(`handler`): [`LeaderboardRoles`](/api/LeaderboardRoles)
+> **new LeaderboardRoles**(`handler`): [`LeaderboardRoles`](/docs/kiai.js/LeaderboardRoles)
 
 #### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `handler` | [`RequestHandler`](/api/RequestHandler) |
+| `handler` | [`RequestHandler`](/docs/kiai.js/RequestHandler) |
 
 #### Returns
 
-[`LeaderboardRoles`](/api/LeaderboardRoles)
+[`LeaderboardRoles`](/docs/kiai.js/LeaderboardRoles)
 
 #### Inherited from
 
@@ -30,13 +30,13 @@ title: LeaderboardRoles
 
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
-| <a id="_handler"></a> `_handler` | `public` | [`RequestHandler`](/api/RequestHandler) | `BaseHandler._handler` |
+| <a id="_handler"></a> `_handler` | `public` | [`RequestHandler`](/docs/kiai.js/RequestHandler) | `BaseHandler._handler` |
 
 ## Methods
 
 ### clearLeaderboardRoles()
 
-> **clearLeaderboardRoles**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse)\>
+> **clearLeaderboardRoles**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/docs/type-aliases/SuccessResponse)\>
 
 Delete all leaderboard roles for a guild
 
@@ -48,13 +48,13 @@ Delete all leaderboard roles for a guild
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/docs/type-aliases/SuccessResponse)\>
 
 ***
 
 ### createLeaderboardRole()
 
-> **createLeaderboardRole**(`guildId`, `data`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse)\>
+> **createLeaderboardRole**(`guildId`, `data`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/docs/type-aliases/SuccessResponse)\>
 
 Create a new leaderboard role
 
@@ -63,17 +63,17 @@ Create a new leaderboard role
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `guildId` | `string` | The guild ID to create the role in |
-| `data` | [`Omit`](https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys)\<[`LeaderboardRole`](/type-aliases/LeaderboardRole), `"id"` \| `"guildId"`\> | The role data |
+| `data` | [`Omit`](https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys)\<[`LeaderboardRole`](/docs/type-aliases/LeaderboardRole), `"id"` \| `"guildId"`\> | The role data |
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/docs/type-aliases/SuccessResponse)\>
 
 ***
 
 ### deleteLeaderboardRole()
 
-> **deleteLeaderboardRole**(`guildId`, `roleId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse)\>
+> **deleteLeaderboardRole**(`guildId`, `roleId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/docs/type-aliases/SuccessResponse)\>
 
 Delete a specific leaderboard role
 
@@ -86,13 +86,13 @@ Delete a specific leaderboard role
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/docs/type-aliases/SuccessResponse)\>
 
 ***
 
 ### getLeaderboardRoles()
 
-> **getLeaderboardRoles**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`LeaderboardRole`](/type-aliases/LeaderboardRole)[]\>
+> **getLeaderboardRoles**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`LeaderboardRole`](/docs/type-aliases/LeaderboardRole)[]\>
 
 Get all leaderboard roles for a guild
 
@@ -104,4 +104,4 @@ Get all leaderboard roles for a guild
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`LeaderboardRole`](/type-aliases/LeaderboardRole)[]\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`LeaderboardRole`](/docs/type-aliases/LeaderboardRole)[]\>

@@ -10,17 +10,17 @@ title: Rewards
 
 ### new Rewards()
 
-> **new Rewards**(`handler`): [`Rewards`](/api/Rewards)
+> **new Rewards**(`handler`): [`Rewards`](/docs/kiai.js/Rewards)
 
 #### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `handler` | [`RequestHandler`](/api/RequestHandler) |
+| `handler` | [`RequestHandler`](/docs/kiai.js/RequestHandler) |
 
 #### Returns
 
-[`Rewards`](/api/Rewards)
+[`Rewards`](/docs/kiai.js/Rewards)
 
 #### Inherited from
 
@@ -30,13 +30,13 @@ title: Rewards
 
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
-| <a id="_handler"></a> `_handler` | `public` | [`RequestHandler`](/api/RequestHandler) | `BaseHandler._handler` |
+| <a id="_handler"></a> `_handler` | `public` | [`RequestHandler`](/docs/kiai.js/RequestHandler) | `BaseHandler._handler` |
 
 ## Methods
 
 ### clearRewards()
 
-> **clearRewards**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse) & [`CountResponse`](/type-aliases/CountResponse)\>
+> **clearRewards**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/docs/type-aliases/SuccessResponse) & [`CountResponse`](/docs/type-aliases/CountResponse)\>
 
 #### Parameters
 
@@ -46,7 +46,7 @@ title: Rewards
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse) & [`CountResponse`](/type-aliases/CountResponse)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/docs/type-aliases/SuccessResponse) & [`CountResponse`](/docs/type-aliases/CountResponse)\>
 
 ***
 
@@ -59,7 +59,7 @@ title: Rewards
 | Parameter | Type |
 | ------ | ------ |
 | `guildId` | `string` |
-| `data` | [`Omit`](https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys)\<[`Reward`](/type-aliases/Reward), `"id"`\> |
+| `data` | [`Omit`](https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys)\<[`Reward`](/docs/type-aliases/Reward), `"id"`\> |
 
 #### Returns
 
@@ -69,7 +69,7 @@ title: Rewards
 
 ### deleteReward()
 
-> **deleteReward**(`guildId`, `id`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse)\>
+> **deleteReward**(`guildId`, `id`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/docs/type-aliases/SuccessResponse)\>
 
 #### Parameters
 
@@ -80,13 +80,13 @@ title: Rewards
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/docs/type-aliases/SuccessResponse)\>
 
 ***
 
 ### getRewards()
 
-> **getRewards**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Reward`](/type-aliases/Reward)[]\>
+> **getRewards**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Reward`](/docs/type-aliases/Reward)[]\>
 
 #### Parameters
 
@@ -96,4 +96,4 @@ title: Rewards
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Reward`](/type-aliases/Reward)[]\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Reward`](/docs/type-aliases/Reward)[]\>
