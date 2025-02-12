@@ -1,0 +1,55 @@
+---
+title: KiaiClient
+---
+
+## Constructors
+
+### new KiaiClient()
+
+> **new KiaiClient**(`apiKey`, `options`?): [`KiaiClient`](/api/KiaiClient)
+
+Create a new KiaiClient
+
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `apiKey` | `string` | The API key to use for Kiai's API |
+| `options`? | \{ `baseURL`: `string`; `debug`: `boolean`; `fetchFunction`: (`url`, `init`?) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Response`](https://developer.mozilla.org/docs/Web/API/Response)\>; `version`: `` `v${number}` ``; \} | The options to use to initialize the client |
+| `options.baseURL`? | `string` | The base URL to use for Kiai's API |
+| `options.debug`? | `boolean` | Whether to enable debug logging |
+| `options.fetchFunction`? | (`url`, `init`?) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Response`](https://developer.mozilla.org/docs/Web/API/Response)\> | The fetch function to use for Kiai's API If you want to use your own fetch function (e.g. for a custom proxy), you can pass it here |
+| `options.version`? | `` `v${number}` `` | The version of the API to use |
+
+#### Returns
+
+[`KiaiClient`](/api/KiaiClient)
+
+## Properties
+
+| Property | Modifier | Type |
+| ------ | ------ | ------ |
+| <a id="_requesthandler"></a> `_requestHandler` | `readonly` | [`RequestHandler`](/api/RequestHandler) |
+| <a id="apikey-1"></a> `apiKey` | `readonly` | `string` |
+| <a id="baseurl-1"></a> `baseURL` | `readonly` | `string` |
+| <a id="debug-1"></a> `debug` | `readonly` | `boolean` |
+| <a id="denylist"></a> `denylist` | `readonly` | [`Denylist`](/api/Denylist) |
+| <a id="leaderboardroles"></a> `leaderboardRoles` | `readonly` | [`LeaderboardRoles`](/api/LeaderboardRoles) |
+| <a id="leveling"></a> `leveling` | `readonly` | [`Leveling`](/api/Leveling) |
+| <a id="misc"></a> `misc` | `readonly` | [`Misc`](/api/Misc) |
+| <a id="multipliers"></a> `multipliers` | `readonly` | [`Multipliers`](/api/Multipliers) |
+| <a id="rewards"></a> `rewards` | `readonly` | [`Rewards`](/api/Rewards) |
+| <a id="settings"></a> `settings` | `readonly` | [`Settings`](/api/Settings) |
+| <a id="version-1"></a> `version` | `readonly` | `` `v${string}` `` |
+
+## Methods
+
+### getRoot()
+
+> **getRoot**(): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RootResponse`](/type-aliases/RootResponse)\>
+
+Get information about the API
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RootResponse`](/type-aliases/RootResponse)\>

@@ -1,0 +1,122 @@
+---
+title: Leveling
+---
+
+## Extends
+
+- `BaseHandler`
+
+## Constructors
+
+### new Leveling()
+
+> **new Leveling**(`handler`): [`Leveling`](/api/Leveling)
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `handler` | [`RequestHandler`](/api/RequestHandler) |
+
+#### Returns
+
+[`Leveling`](/api/Leveling)
+
+#### Inherited from
+
+`BaseHandler.constructor`
+
+## Properties
+
+| Property | Modifier | Type | Inherited from |
+| ------ | ------ | ------ | ------ |
+| <a id="_handler"></a> `_handler` | `public` | [`RequestHandler`](/api/RequestHandler) | `BaseHandler._handler` |
+
+## Methods
+
+### addXp()
+
+> **addXp**(`guildId`, `userId`, `xp`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `userId` | `string` |
+| `xp` | `number` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse)\>
+
+***
+
+### getLeaderboard()
+
+> **getLeaderboard**(`guildId`, `start`, `end`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Leaderboard`](/type-aliases/Leaderboard)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `start` | `undefined` \| `number` |
+| `end` | `undefined` \| `number` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Leaderboard`](/type-aliases/Leaderboard)\>
+
+***
+
+### getMember()
+
+> **getMember**(`guildId`, `userId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`LevelData`](/type-aliases/LevelData)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `userId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`LevelData`](/type-aliases/LevelData)\>
+
+***
+
+### removeXp()
+
+> **removeXp**(`guildId`, `userId`, `xp`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `userId` | `string` |
+| `xp` | `number` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse)\>
+
+***
+
+### setXp()
+
+> **setXp**(`guildId`, `userId`, `xp`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `userId` | `string` |
+| `xp` | `number` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse)\>
