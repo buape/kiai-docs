@@ -16,6 +16,7 @@ jobs:
           repository: buape/kiai
           token: ${{ secrets.BUAPEBOT_TOKEN }}
           fetch-depth: 0
+          submodules: true
 
       - name: Configure Git
         run: |
@@ -25,6 +26,8 @@ jobs:
       - name: Update submodule
         run: |
           git submodule update --recursive --remote
+          git add apps/web/kiai-docs
+          git commit -m "chore: update kiai-docs submodule"
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
@@ -36,7 +39,7 @@ jobs:
             This PR updates the kiai-docs submodule to the latest version from the v2 branch.
             
             This update was automatically created by a GitHub Action.
-          branch: update-kiai-docs-submodule
+          branch: buapebot/update-kiai-docs-submodule
           delete-branch: true
           reviewers: thewilloftheshadow
           base: main 
