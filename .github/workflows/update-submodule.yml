@@ -1,0 +1,46 @@
+name: Update Kiai Docs Submodule
+
+on:
+  push:
+    branches:
+      - v2
+  workflow_dispatch: 
+
+jobs:
+  update-submodule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout kiai repository
+        uses: actions/checkout@v4
+        with:
+          repository: buape/kiai
+          token: ${{ secrets.BUAPEBOT_TOKEN }}
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'Automagical Magic'
+          git config --global user.email 'buapestudios@gmail.com'
+
+      - name: Update submodule
+        run: |
+          cd apps/web/kiai-docs
+          git fetch origin v2
+          git checkout origin/v2
+          cd ../../..
+          git add apps/web/kiai-docs
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.BUAPEBOT_TOKEN }}
+          commit-message: "chore: update kiai-docs submodule"
+          title: "chore: update kiai-docs submodule"
+          body: |
+            This PR updates the kiai-docs submodule to the latest version from the v2 branch.
+            
+            This update was automatically created by a GitHub Action.
+          branch: update-kiai-docs-submodule
+          delete-branch: true
+          reviewers: thewilloftheshadow
+          base: main 
