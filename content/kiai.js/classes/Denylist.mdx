@@ -1,0 +1,129 @@
+---
+title: Denylist
+---
+
+## Extends
+
+- `BaseHandler`
+
+## Constructors
+
+### new Denylist()
+
+> **new Denylist**(`handler`): [`Denylist`](/api/Denylist)
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `handler` | [`RequestHandler`](/api/RequestHandler) |
+
+#### Returns
+
+[`Denylist`](/api/Denylist)
+
+#### Inherited from
+
+`BaseHandler.constructor`
+
+## Properties
+
+| Property | Modifier | Type | Inherited from |
+| ------ | ------ | ------ | ------ |
+| <a id="_handler"></a> `_handler` | `public` | [`RequestHandler`](/api/RequestHandler) | `BaseHandler._handler` |
+
+## Methods
+
+### createDenylist()
+
+> **createDenylist**(`guildId`, `data`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`DenylistEntry`](/type-aliases/DenylistEntry)\>
+
+Create a new denylist entry
+
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `guildId` | `string` | The guild ID to create the entry in |
+| `data` | \{ `id`: `string`; `type`: `"channel"` \| `"role"` \| `"user"`; \} | The entry data |
+| `data.id` | `string` | - |
+| `data.type` | `"channel"` \| `"role"` \| `"user"` | - |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`DenylistEntry`](/type-aliases/DenylistEntry)\>
+
+***
+
+### deleteAllDenylists()
+
+> **deleteAllDenylists**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/type-aliases/CountResponse)\>
+
+Delete all denylists for a guild
+
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `guildId` | `string` | The guild ID to delete denylists from |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/type-aliases/CountResponse)\>
+
+***
+
+### deleteAllDenylistsByType()
+
+> **deleteAllDenylistsByType**(`guildId`, `type`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/type-aliases/CountResponse)\>
+
+Delete all denylists for a guild by type
+
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `guildId` | `string` | The guild ID to delete denylists from |
+| `type` | `"channel"` \| `"role"` \| `"user"` | The type of denylists to delete |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/type-aliases/CountResponse)\>
+
+***
+
+### deleteDenylistById()
+
+> **deleteDenylistById**(`guildId`, `type`, `id`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`DenylistEntry`](/type-aliases/DenylistEntry)\>
+
+Delete a specific denylist entry
+
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `guildId` | `string` | The guild ID the entry is in |
+| `type` | `"channel"` \| `"role"` \| `"user"` \| `"internal"` | - |
+| `id` | `string` | The ID of the entry to delete, this can be the internal ID, user ID, channel ID or role ID |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`DenylistEntry`](/type-aliases/DenylistEntry)\>
+
+***
+
+### getDenylists()
+
+> **getDenylists**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Denylists`](/type-aliases/Denylists)\>
+
+Get all denylists for a guild
+
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `guildId` | `string` | The guild ID to get denylists for |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Denylists`](/type-aliases/Denylists)\>

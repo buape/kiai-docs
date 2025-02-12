@@ -1,0 +1,63 @@
+---
+title: RequestHandler
+---
+
+**`Internal`**
+
+This class is used to make requests to the Kiai API, and handles rate limiting and error handling.
+You can technically use this class directly, but it's recommended to use the client instead.
+
+## Constructors
+
+### new RequestHandler()
+
+> **new RequestHandler**(`baseURL`, `apiKey`, `debug`, `fetchFunction`): [`RequestHandler`](/api/RequestHandler)
+
+#### Parameters
+
+| Parameter | Type | Default value |
+| ------ | ------ | ------ |
+| `baseURL` | `string` | `undefined` |
+| `apiKey` | `string` | `undefined` |
+| `debug` | `boolean` | `false` |
+| `fetchFunction` | (`url`, `init`?) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Response`](https://developer.mozilla.org/docs/Web/API/Response)\> | `fetch` |
+
+#### Returns
+
+[`RequestHandler`](/api/RequestHandler)
+
+## Properties
+
+| Property | Type |
+| ------ | ------ |
+| <a id="apikey-1"></a> `apiKey` | `string` |
+| <a id="baseurl-1"></a> `baseURL` | `string` |
+| <a id="debug-1"></a> `debug` | `boolean` |
+| <a id="fetchfunction-1"></a> `fetchFunction` | (`url`: `string` \| [`URL`](https://developer.mozilla.org/docs/Web/API/URL), `init`?: `RequestInit`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Response`](https://developer.mozilla.org/docs/Web/API/Response)\> |
+
+## Methods
+
+### request()
+
+> **request**\<`T`\>(`endpoint`, `method`, `query`, `body`, `noError`, `customBaseUrl`?): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
+
+#### Type Parameters
+
+| Type Parameter |
+| ------ |
+| `T` |
+
+#### Parameters
+
+| Parameter | Type | Default value |
+| ------ | ------ | ------ |
+| `endpoint` | `string` | `undefined` |
+| `method` | `"GET"` \| `"POST"` \| `"PATCH"` \| `"PUT"` \| `"DELETE"` | `"GET"` |
+| `query` | [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `string` \| `number` \| `boolean`\> | `{}` |
+| `body` | [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `unknown`\> | `{}` |
+| `noError` | `boolean` | `false` |
+| `customBaseUrl`? | `string` | `undefined` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>

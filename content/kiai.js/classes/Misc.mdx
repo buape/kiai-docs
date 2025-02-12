@@ -1,0 +1,63 @@
+---
+title: Misc
+---
+
+## Extends
+
+- `BaseHandler`
+
+## Constructors
+
+### new Misc()
+
+> **new Misc**(`handler`): [`Misc`](/api/Misc)
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `handler` | [`RequestHandler`](/api/RequestHandler) |
+
+#### Returns
+
+[`Misc`](/api/Misc)
+
+#### Inherited from
+
+`BaseHandler.constructor`
+
+## Properties
+
+| Property | Modifier | Type | Inherited from |
+| ------ | ------ | ------ | ------ |
+| <a id="_handler"></a> `_handler` | `public` | [`RequestHandler`](/api/RequestHandler) | `BaseHandler._handler` |
+
+## Methods
+
+### getSelf()
+
+> **getSelf**(): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`MeResponse`](/type-aliases/MeResponse)\>
+
+Get information about the current application
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`MeResponse`](/type-aliases/MeResponse)\>
+
+***
+
+### postVirtualMessage()
+
+> **postVirtualMessage**(`message`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse)\>
+
+Post a virtual message
+
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `message` | [`VirtualMessage`](/type-aliases/VirtualMessage) | The message to post |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse)\>

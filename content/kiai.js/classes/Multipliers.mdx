@@ -1,0 +1,100 @@
+---
+title: Multipliers
+---
+
+## Extends
+
+- `BaseHandler`
+
+## Constructors
+
+### new Multipliers()
+
+> **new Multipliers**(`handler`): [`Multipliers`](/api/Multipliers)
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `handler` | [`RequestHandler`](/api/RequestHandler) |
+
+#### Returns
+
+[`Multipliers`](/api/Multipliers)
+
+#### Inherited from
+
+`BaseHandler.constructor`
+
+## Properties
+
+| Property | Modifier | Type | Inherited from |
+| ------ | ------ | ------ | ------ |
+| <a id="_handler"></a> `_handler` | `public` | [`RequestHandler`](/api/RequestHandler) | `BaseHandler._handler` |
+
+## Methods
+
+### clearAllMultipliers()
+
+> **clearAllMultipliers**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/type-aliases/CountResponse)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/type-aliases/CountResponse)\>
+
+***
+
+### createMultiplier()
+
+> **createMultiplier**(`guildId`, `data`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Multiplier`](/type-aliases/Multiplier)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `data` | [`Omit`](https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys)\<[`Multiplier`](/type-aliases/Multiplier), `"id"`\> |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Multiplier`](/type-aliases/Multiplier)\>
+
+***
+
+### getMultiplier()
+
+> **getMultiplier**(`guildId`, `type`, `id`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Multiplier`](/type-aliases/Multiplier)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `type` | `"channel"` \| `"role"` \| `"internal"` |
+| `id` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Multiplier`](/type-aliases/Multiplier)\>
+
+***
+
+### getMultipliers()
+
+> **getMultipliers**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`MultiplierResponse`](/type-aliases/MultiplierResponse)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`MultiplierResponse`](/type-aliases/MultiplierResponse)\>

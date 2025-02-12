@@ -1,0 +1,99 @@
+---
+title: Rewards
+---
+
+## Extends
+
+- `BaseHandler`
+
+## Constructors
+
+### new Rewards()
+
+> **new Rewards**(`handler`): [`Rewards`](/api/Rewards)
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `handler` | [`RequestHandler`](/api/RequestHandler) |
+
+#### Returns
+
+[`Rewards`](/api/Rewards)
+
+#### Inherited from
+
+`BaseHandler.constructor`
+
+## Properties
+
+| Property | Modifier | Type | Inherited from |
+| ------ | ------ | ------ | ------ |
+| <a id="_handler"></a> `_handler` | `public` | [`RequestHandler`](/api/RequestHandler) | `BaseHandler._handler` |
+
+## Methods
+
+### clearRewards()
+
+> **clearRewards**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse) & [`CountResponse`](/type-aliases/CountResponse)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse) & [`CountResponse`](/type-aliases/CountResponse)\>
+
+***
+
+### createReward()
+
+> **createReward**(`guildId`, `data`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<\{ `id`: `string`; \}\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `data` | [`Omit`](https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys)\<[`Reward`](/type-aliases/Reward), `"id"`\> |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<\{ `id`: `string`; \}\>
+
+***
+
+### deleteReward()
+
+> **deleteReward**(`guildId`, `id`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `id` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/type-aliases/SuccessResponse)\>
+
+***
+
+### getRewards()
+
+> **getRewards**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Reward`](/type-aliases/Reward)[]\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Reward`](/type-aliases/Reward)[]\>
