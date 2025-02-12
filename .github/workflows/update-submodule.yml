@@ -24,11 +24,7 @@ jobs:
 
       - name: Update submodule
         run: |
-          cd apps/web/kiai-docs
-          git fetch origin v2
-          git checkout origin/v2
-          cd ../../..
-          git add apps/web/kiai-docs
+          git submodule update --recursive --remote
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
