@@ -12,7 +12,7 @@ const config: DocsThemeConfig = {
 	},
 	docsRepositoryBase: "https://github.com/buape/kiai-docs/tree/main",
 	footer: {
-		text: "© 2024 Buape Studios",
+		text: "© 2025 Buape Studios",
 	},
 	useNextSeoProps() {
 		const { asPath } = useRouter();
