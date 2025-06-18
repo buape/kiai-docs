@@ -26,7 +26,7 @@ const config: DocsThemeConfig = {
 		const { asPath, defaultLocale, locale } = useRouter();
 		const { frontMatter } = useConfig();
 		const url =
-			"https://docs.kiaibot.com" +
+			"https://docs.kiai.app" +
 			(defaultLocale === locale ? asPath : `/${locale}${asPath}`);
 
 		return (
