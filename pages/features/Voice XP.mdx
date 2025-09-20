@@ -1,11 +1,16 @@
 # Voice XP
 
-Kiai offers your server members the ability to gain XP while they chat in voice channels.
+Kiai allows your server members to gain XP while chatting in voice channels.
 
-By default, voice XP is enabled and set to a leveling rate of 10 XP per minute. You can change whether voice XP is enabled and the rate at which XP is gained with the `/settings guild` command.
+By default, Voice XP is enabled and set to a rate of **10 XP per minute**. You can change whether it’s enabled and adjust the rate with the [`/settings`](/commands/settings) command.
 
-Voice XP follows your regular denylist and multiplier rules, and has no limit on how many members it can track voice XP for.
+Voice XP follows your existing denylist and multiplier rules. There is no limit on how many members Kiai can track in voice channels.
 
 ## How it works
 
-After a member joins a voice channel Kiai will wait 10 seconds, then check if they are still in the channel. If they are, Kiai will note the time they joined the channel (including the 10 seconds), and then wait until they leave. If a member is muted or deafened (either by themselves or a moderator), the times spent muted or deafened will not count towards the XP gained. When a member leaves a voice chanel Kiai will again wait 10 seconds before marking the voice session as complete. **Kiai will only calculate the XP gained and any potential level-ups when they leave the channel.**
+When a member joins a voice channel, Kiai waits 10 seconds and then checks if they are still there.  
+- If they are, Kiai records their join time (including the 10-second wait) and tracks their session until they leave.  
+- If a member is muted or deafened (by themselves or a moderator), that time does not count toward XP.  
+- When the member leaves, Kiai waits another 10 seconds before marking the session as complete.  
+
+**XP is only calculated along with any potential level-ups after the member leaves the channel.**
