@@ -3,8 +3,11 @@
 ## Syntax
 
 ```
-/xp add <xp> [level] [user] [role]
-/xp remove <xp> [user] [role]
+/xp add <xp|level> [user] [role]
+/xp remove <xp|level> [user] [role]
+/xp prune [user]
+/xp reset <user|role>
+/xp set <xp|level> [user] [role]
 ```
 
 ## Permissions
@@ -18,7 +21,13 @@ The XP command allows you to add or remove XP from users or roles. You can also 
 ## Examples
 
 ```
-/xp add xp:100 user:@User#0001
+/xp add xp:100 user:@john
 
-/xp remove xp:100 role:@Members
+/xp remove level:10 role:@Members
+
+/xp prune
+
+/xp reset user:@john
+
+/xp set level:100 @Members
 ```

@@ -16,7 +16,7 @@ The /settings command allows you to change the settings of the bot for your serv
 
 ## Detailed setting explanations
 
-Below, you can find additional descriptions and clarification for settings that may not be clear to understand.
+Below, you can find additional descriptions and clarification for settings that may be unclear.
 
 ### Stack Role Rewards Option
 
@@ -59,12 +59,12 @@ If you've set the XP drop expiration time to 1 hour, users will have 1 hour to c
 ### XP Drop Message
 
 This setting allows you to customize the message sent when an XP drop is sent in your server. You can use the following placeholders in your message:
-- `{amount}`—The amount of XP that is being dropped.
-- `{expire}`—A timestamp of when the XP drop will expire.
+- `{amount}`: The amount of XP that is being dropped.
+- `{expire}`: is replaced with a Discord timestamp showing when the drop will expire. Discord automatically formats it into a relative time (e.g., “in 1 hour” or “1 hour ago”).
 
 #### Example
 
-If you've set the XP drop message to
+If you've set the XP drop message to:
 
 `You've received {amount} XP! It expires {expire}!`
 
