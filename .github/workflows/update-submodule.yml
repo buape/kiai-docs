@@ -30,7 +30,7 @@ jobs:
           git add apps/web/kiai-docs
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.BUAPEBOT_TOKEN }}
           commit-message: "chore: update kiai-docs submodule"
