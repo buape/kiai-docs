@@ -1,0 +1,39 @@
+---
+title: Logging
+description: Introduction to the Logging features of Kiai
+---
+
+# Logging
+
+Logging settings can be found in `/settings > Logging Channels`. From here you can see a multitude of logging options.
+
+# Message XP
+
+Sends a log everytime a user recieved message xp. The log contains the user and XP gained.
+
+# Voice XP
+
+Sends a log to the selected channels when a user recieves XP from Voice XP. This log contains the user and amount of XP recieved.
+
+# Manual XP Changes
+
+This triggers when XP is set manually using a command such as `/xp set` or any similar command. The log will contain the user who ran the command, the target, and the action that happened.
+
+# XP Decay
+
+The XP Decay log will send when a XP Decay is triggered, and will contain:
+ - Amount of users decayed
+ - XP Amount decayed
+ - A file with a list of userids with their before and after XP. This file gets truncated at 5,000 users.
+
+# XP Streaks
+
+XP Streak logs will provide more insight into what is happening XP-wise. This log will give you the users current streak and the bonus xp that they recieved for their streak.
+
+# Settings
+
+This log will send a message whenever a Kiai setting is changed. This log includes who changed it and the new value.
+
+# Errors
+
+The errors log is used to catch Kiai errors and put them into a specific channel. This log is helpful as it can make resolving the issue faster. Support Staff can use the Error Code to get a better understanding of the situation and what might have happened.

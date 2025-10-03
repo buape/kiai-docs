@@ -1,0 +1,27 @@
+---
+title: Customizing XP Gain
+description: 
+---
+
+# Message XP
+Message XP follow a simple set of settings found in `/settings > Message XP`. Message XP is randomly given reguardless of message length.
+
+XP Cooldown specifies how long until another message can count for XP.
+
+Minimum XP per message specifies the minimum amount of xp that can be gained from a message
+
+Maximum XP per message specifies the maximum amount of xp that can be gained from a message
+
+Level Cap specifies the max level that can be achieved. The users will continue to recieve xp, but they will not display as anything above this level.
+
+The Reset Member XP on Leave/Kick option resets a users xp when they leave the guild.
+
+Reset Member XP on Ban resets the xp a user has when they get banned from the server
+
+# XP Formula
+
+The XP Formula specifies how levels will be determined. By default, Kiai uses the formula `12 * ({level} * {level}) + {level} * 12`, which can be visualized here https://www.desmos.com/calculator/jpwyjlqih9.
+
+When making a custom XP Formula, it is important to include {level}, which is replaced with the member's current level and is used to calculate the xp cost to reach the next level.
+
+Kiai does not support restarting XP at 0 each level, but adding `+ {xp}` to your formula will achieve the same result.

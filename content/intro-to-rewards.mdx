@@ -1,0 +1,37 @@
+---
+title: Intro to Rewards
+description: Learn what Rewards are and how to use them.
+---
+
+# Rewards
+
+Kiai offers rewards as a way to give a user something at a certain level.
+
+Currently there are five reward options:
+- Roles 
+- Custom Messages
+- Money (Unbelivaboat Currency)
+- Nickname
+- Leaderboard Roles
+
+# Roles
+
+<Callout title="Required Permissions" type="info">This type of reward requires the bot to have the `Manage Roles` permission</Callout>
+
+Role rewards can be used to either give or remove a role upon reaching a specified level. Giving roles could be used for level roles such as Level 10, Level 20, etc. Where at a certain level, you want your guild members to gain a role.
+
+The removal action is a similar feature which allows a role to be removed from a user after reaching a level. The main use for this feature of role rewards is to remove a role (usually one that removes certain permissions), which users get on join.
+
+There are optional parameters to both of these to set a required role, where the user will need a role in order to recieve the reward, and a temporary length option that will give the user the reward for a limited amount of time.
+
+# Custom Messages
+
+Custom Messages are used to send a messsage seperate to the level up message. When a user reaches the reward level, Kiai will send the message in the same channel that xp was recieved in. The channel the message is sent in can be configured through the "channel" option in `/rewards add message` and a required role can also be set for this reward.
+
+# Money
+
+Kiai can be integrated with UnbelievaBoat to reward money for reaching a specified level. Similar to the other rewards, a required role can be set for this type of reward. For more information, see UnbelievaBoat Integration.
+
+# Nicknames
+
+Nicknames can be used to give a special nickname at a certain level. For example, if you wanted to put a emoji in someones name when they reach a certain level. This should only be used on one-off cases, if it should apply to all levels, use Nickname Format.
