@@ -1,24 +1,43 @@
 ---
 title: Exclusions
-description: A introduction the the ex
+description: How to prevent certain channels, roles, or users from earning XP.
 ---
 
 # Exclusions
 
-Exclusion settings can be found in `/settings > Denylist`.
+Exclusion settings can be found in `/settings > Denylist`.  
 
-Exclusions in Kiai apply to all methods of recieving XP (message, voice, drops, etc). Kiai has 3 exclusion options: Channels, Roles, and Users.
+Exclusions apply to **all XP methods** (messages, voice, drops, etc.) and are a way to control who can earn XP in your server. Kiai supports three types of exclusions: **Channels**, **Roles**, and **Users**.
 
-# Channels
+---
 
-Channel exclusions are often set on channels that may be spammed or flooded often or just a channel that is not intended for XP.
+## Channels
 
-# Roles
+Channel exclusions are useful for channels that:  
+- Are often spammed or flooded  
+- Are not intended for meaningful XP activity  
 
-Roles exclusions can be used to remove the ability for a certain group of users from recieving XP.
+**Example:**  
+Excluding `#memes` ensures users don’t gain XP from posting there, keeping XP focused on productive discussion channels like `#general` or `#help`.
 
-# Users
+---
 
-User exclusions are useful on case-by-case basises where someone is abusing the XP system or doing something else that is disruptive.
+## Roles
 
-Exclusions could also be used to prevent top ranking leaderboard users and to encourage a more competitive leaderboard environment.
+Role exclusions remove XP earning from specific groups of users.  
+
+**Example:**  
+You might exclude moderators or bots from earning XP to prevent them from dominating the leaderboard.
+
+---
+
+## Users
+
+User exclusions apply on a case-by-case basis. This is helpful for:  
+- Members who are abusing the XP system  
+- Disruptive behavior that would unfairly affect progression  
+
+**Example:**  
+A user repeatedly spams messages to gain XP quickly. Excluding them stops further XP accumulation while maintaining fairness for others.
+
+Exclusions can also be used strategically to prevent top-ranking leaderboard users from always dominating, encouraging more competitive and active participation across your community.

@@ -1,28 +1,54 @@
 ---
 title: Advanced XP Settings
-description:
+description: Configure advanced XP features like streaks, drops, and decay.
 ---
 
-# XP Streaks
+# Advanced XP Settings
 
-XP Streaks allow a user to gain extra XP for gaining a set amount of XP per day.
+Kiai includes advanced XP features that let you reward consistent activity, create surprise bonuses, and maintain engagement over time. These include **XP Streaks**, **XP Drops**, and **XP Decay**.
 
-XP Streaks can be enabled in `/settings > XP Streaks` and set to send in a specific channel. Advanced configuration of XP Streaks is only avaliable to premium guilds.
+---
 
-# XP Drops
+## XP Streaks
 
-XP Drop settings can be found in `/settings > XP Drops`
+XP Streaks reward users for gaining a set amount of XP each day.
 
-XP Drops allow for occasional drops of XP. These time between these drops is determined by the "Minimum Time Between Drops" setting, and can be triggered by the /drop command. 
+- Enable in `/settings > XP Streaks`.  
+- Choose a channel for streak notifications.  
+- Advanced streak configuration is available to **premium guilds**.
 
-The drop will expire after the configured Expire Time and are limited to the Drops per Day setting. The XP amount is randomized between the Minimum and Maximum XP Amount.
+**Example:**  
+A user earns 50 XP per day. If the streak threshold is set to 50 XP/day, they receive an extra 10 XP for maintaining a streak. After 3 consecutive days, the user’s bonus XP totals 30.
 
-The message sent can be configured as well as what happens when the drop is claimed. 
+---
 
-# XP Decay
+## XP Drops
 
-XP Decay is used to take away xp regularly. It can be used to ensure people are active to keep their levels.
+XP Drops give members occasional bonus XP that can be claimed in chat.
 
- When XP decay runs, the specified amount of XP set in the "XP Decay Amount" setting (located in the "XP Decay" category) will be deducted from everyone. 
- 
- The XP Interval determines how often XP decay runs.
+- Configure in `/settings > XP Drops`.  
+- Drops occur automatically based on the **Minimum Time Between Drops** or can be triggered manually with `/drop`.  
+- Each drop has an **Expire Time** and is limited by **Drops per Day**.  
+- XP amount is randomized between the configured **Minimum** and **Maximum XP**.  
+- You can customize the announcement message and what happens when a drop is claimed.
+
+**Example:**  
+Every 30 minutes, a drop of 10–50 XP appears in `#general`. A user types `/drop` and claims 25 XP. If unclaimed, the drop expires after 5 minutes. The bot might announce:  
+> "🎉 An XP drop appeared! Claim it before it disappears!"
+
+---
+
+## XP Decay
+
+XP Decay removes XP over time to encourage consistent participation.
+
+- Set the **XP Decay Amount** for how much XP is deducted.  
+- Use **XP Interval** to determine how often decay occurs.  
+- XP Decay affects all members automatically.
+
+**Example:**  
+XP Decay is set to 5 XP every 24 hours. A member with 100 XP loses 5 XP daily if they do not earn new XP, encouraging ongoing activity to maintain levels.
+
+---
+
+These features let you create dynamic and engaging progression systems, rewarding consistent activity while keeping your server active.
