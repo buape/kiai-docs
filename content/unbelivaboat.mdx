@@ -5,4 +5,27 @@ description: Learn about our Integration with Unbelivaboat
 
 # UnbelivaBoat Integration
 
-<!-- TODO: Might be broke -->
+UnbelivaBoat is a commonly used economy bot for your discord bot. Kiai offers a integration wherein members receive currency as a level up reward.
+
+## Make sure UnbelivaBoat is in your server
+
+For this integration to work, you must have UnbelivaBoat in your server. You can learn more about UnbelivaBoat and find the link to invite the bot on their [Website](https://unbelievaboat.com/).
+
+## Authorize Kiai
+
+Now that you have UnbelivaBoat in your server, you need to authoize Kiai to make changes to your economy. This will allow Kiai to give money to members of your server. 
+
+UnbelivaBoat requires the person authorizing the application to have the Administrator permission. The link to authorize Kiai can be found here: https://unbelievaboat.com/applications/authorize?app_id=871968895648794818
+
+Kiai only requires the "Access and edit this servers economy" permission.
+
+## Add the Money Reward
+
+At this point, all the setup for the integration has been completed and you can now utilize the `/rewards add money` command to give money to members for reaching certain levels.
+
+The options for this command are:
+
+- **Amount:** The amount of money to which the member will recieve
+- **Level:** The level at which the reward will be given
+- **Bank:** This determines if the money will go to the members cash or bank total. The main difference is that cash money can be stolen while bank money can't. This option takes a True/False value.
+- **Required Role:** This optional parameter will only give out the reward if the member also has a certain role.
