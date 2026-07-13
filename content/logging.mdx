@@ -11,8 +11,8 @@ Logging settings can be found in `/settings > Logging Channels`. From here, you 
 
 ## Message XP
 
-Logs when a user receives XP for sending messages.  
-- Includes the **user** and **XP gained**.  
+Logs when a member receives XP for sending messages.  
+- Includes the **member** and **XP gained**.  
 
 **Example:**  
 `User123 earned 12 XP for sending a message in #general.`
@@ -21,8 +21,8 @@ Logs when a user receives XP for sending messages.
 
 ## Voice XP
 
-Logs when a user receives XP from voice activity.  
-- Includes the **user** and **XP gained**.  
+Logs when a member receives XP from voice activity.  
+- Includes the **member** and **XP gained**.  
 
 **Example:**  
 `User123 earned 20 XP from voice activity in #voice-chat.`
@@ -43,7 +43,7 @@ Logs when XP is set manually using commands like `/xp set`.
 
 Logs when XP Decay is triggered.  
 - Includes:  
-  - Number of users decayed  
+  - Number of members decayed  
   - Total XP decayed  
   - A file with user IDs showing their **before** and **after** XP (truncated at 5,000 users)  
 
@@ -65,7 +65,7 @@ Provides insight into streak-based XP gains.
 ## Settings
 
 Logs whenever a Kiai setting is changed.  
-- Includes the **user** who made the change and the **new value**.  
+- Includes the **member** who made the change and the **new value**.  
 
 **Example:**  
 `Admin456 changed "XP Cooldown" from 60s to 45s.`
