@@ -4,55 +4,101 @@ description: Learn what Rewards are and how to use them.
 ---
 
 # Rewards
-    
+
 Kiai offers **rewards** as a way to give members something special when they reach a certain level.
 
-Currently, there are five reward types:  
-- Roles  
-- Custom Messages  
-- Money (via UnbelievaBoat Currency)  
-- Nickname  
-- Leaderboard Roles  
+There are five reward types:
+- Roles
+- Money (via UnbelievaBoat)
+- Custom Messages
+- Nicknames
+- Webhooks
 
----
+Manage rewards with `/rewards add`, `/rewards remove`, `/rewards list`, and `/rewards sync`. These commands require the `Manage Server` permission.
+
+Every reward type accepts an optional **Required Role**. If set, a member must already hold that role to receive the reward.
 
 ## Roles
 
-**Required Permissions:**  
-Kiai needs the **`Manage Roles`** permission to apply role rewards.
+**Required Permissions:**
+Kiai needs the **`Manage Roles`** permission to apply role rewards, and Kiai's own role must sit above the reward role in your server's role list.
 
-Role rewards can **give or remove a role** when a member reaches a specified level:  
-- **Giving roles:** Commonly used for level roles (e.g., Level 10, Level 20).  
-- **Removing roles:** Often used to remove roles that were applied on join or grant temporary permissions.  
+`/rewards add role <role> <level> <add_or_remove> [temporary_length] [required-role]`
 
-Optional parameters include:  
-- **Required role:** The member must have a certain role to receive the reward.  
-- **Temporary length:** Grants the reward for a limited time.
+Role rewards can **give or remove a role** when a member reaches a level:
+- **Giving roles:** Commonly used for level roles, such as Level 10 or Level 20.
+- **Removing roles:** Often used to remove a role that was applied on join, or to remove a temporary permission.
 
----
+**Temporary length** grants the reward for a limited time (up to 14 days), then reverts it automatically.
 
-## Custom Messages
+By default, a member keeps every role reward they qualify for. Turn off **Stack Role Rewards** in `/settings > Leveling Settings` to give only the role from the highest level a member has reached.
 
-Custom Messages allow Kiai to send a message **separate from the level-up message** when a member reaches the reward level.  
-
-Settings include:  
-- **Channel:** The channel the message will be sent in (configured via `/rewards add message`).  
-- **Required role:** Optional requirement for a member to receive the reward.
+By default, Kiai also removes a member's role rewards if they drop below the level that granted them, for example through XP Decay. Turn off **Reverse Role Rewards on Level Down** in `/settings > Leveling Settings` to keep role rewards in place once granted.
 
 ---
 
 ## Money
 
-Kiai can integrate with **UnbelievaBoat** to reward members with currency when reaching a specified level.  
+Kiai can integrate with **UnbelievaBoat** to reward members with currency when they reach a level.
 
-For more details, see the **UnbelievaBoat Integration** guide.
+`/rewards add money <amount> <level> <bank> [required-role]`
+
+Set **Bank** to `True` to deposit the reward to the member's bank, or `False` to deposit it to their cash. Kiai checks that UnbelievaBoat is set up before letting you create this reward.
+
+By default, Kiai takes back a money reward if a member drops below the level that granted it. Turn off **Reverse Money Rewards on Level Down** in `/settings > Leveling Settings` to keep money rewards once granted.
+
+For setup steps, see the [UnbelievaBoat Integration](unbelivaboat.mdx) guide.
+
+---
+
+## Custom Messages
+
+Custom Messages let Kiai send a message, separate from the level-up message, when a member reaches the reward level.
+
+`/rewards add message <message> <level> [channel] [required-role]`
+
+- **Message:** Up to 200 characters. Supports [placeholders](placeholders.mdx).
+- **Channel:** The channel the message is sent in.
+
+A custom message only fires when a member reaches a level. It never fires when a member drops a level.
 
 ---
 
 ## Nicknames
 
-Nicknames can be applied when a member reaches a specific level.  
+Nickname rewards set a formatted nickname for a member when they reach a level.
 
-**Example:** Add an emoji to a member’s name at Level 10.  
+`/rewards add nickname <format> <level> [required-role]`
 
-> Tip: Use this for **one-off cases**. If you want a consistent nickname format for all members, use the **Nickname Format** feature instead.
+- **Format:** A nickname template that supports [placeholders](placeholders.mdx). Kiai truncates the result to 32 characters, Discord's nickname limit.
+
+**Example:** Add an emoji to a member's name at Level 10.
+
+By default, Kiai clears a member's nickname if they drop below the level that set it. Turn off **Reverse Nickname Rewards on Level Down** in `/settings > Leveling Settings` to keep the nickname once set.
+
+> Tip: Use nickname rewards for **one-off cases**. If you want a consistent nickname format for every member, use the **Nickname Format** setting in `/settings > Leveling Settings` instead.
+
+---
+
+## Webhooks
+
+**Premium required:** Webhook rewards are available to premium servers only.
+
+Webhook rewards call an external HTTPS endpoint when a member reaches a level.
+
+`/rewards add webhook <endpoint> <level> [required-role]`
+
+- **Endpoint:** An HTTPS URL, up to 2,048 characters.
+
+When a member reaches the level, Kiai sends a signed JSON request to your endpoint with the event, guild ID, member ID, and level. Kiai signs each request and shows you a public key when you create the reward, so you can verify that a request really came from Kiai. A webhook reward only fires when a member reaches a level. It never fires when a member drops a level, and it stops firing if the server's premium subscription lapses.
+
+---
+
+## Managing Rewards
+
+- `/rewards list` — Lists every reward on the server, grouped by level.
+- `/rewards remove <reward>` — Removes a single reward.
+- `/rewards sync user [user]` — Re-checks and re-applies a member's role rewards to match their current level. Use this if you add or change rewards after a member has already reached that level.
+- `/rewards sync server` — Runs the same check for every member on the server.
+
+> Leaderboard position roles are a separate feature from rewards. They track a member's live leaderboard rank rather than their level. See [Leaderboards](leaderboard.mdx).

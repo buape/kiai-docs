@@ -5,17 +5,21 @@ description: Learn how to enable and configure Voice XP in Kiai.
 
 # Voice XP
 
-**Required Permissions:**  
-Kiai must have **`View Channel`** and **`Connect`** permissions for the voice channel for this feature to work.
+**Required Permissions:**
+Kiai needs the **`View Channel`** and **`Connect`** permissions in a voice channel for this feature to work there.
 
-Voice XP settings can be found in `/settings > Voice XP`.
+Configure Voice XP in `/settings > Voice XP`.
 
-Kiai’s **Voice XP** feature allows members to earn XP by participating in voice channels.  
+Voice XP lets members earn XP by spending time in voice channels.
+
+- **Voice XP**: Turns the feature on or off.
+- **Voice XP per Minute**: How much XP a member earns for each minute in a voice channel.
+- **Minimum Users Required to Gain XP**: The minimum number of members a voice channel needs before anyone in it earns XP. Set between 1 and 100. Muted and deafened members still count toward this minimum. They just do not personally earn XP themselves.
 
 ### How Voice XP Works
 
-- A voice channel must meet the **minimum user count** configured in the settings to start awarding XP.  
-- Members only earn XP for **time spent unmuted and undeafened** in the voice channel.  
-- XP is awarded every 30 seconds while a member is in the channel.
-
-This encourages active participation in voice chats while preventing passive XP farming.
+- Kiai checks every voice channel every 30 seconds and awards half of the per-minute XP rate to each eligible member, rounded down.
+- A voice channel must meet the minimum user count before anyone in it earns XP.
+- A member earns XP only while unmuted and undeafened.
+- A denylisted member does not earn Voice XP. See [Denylists](denylists.mdx).
+- Any [multiplier](multipliers.mdx) for the member's roles, the channel, or the server applies to Voice XP.

@@ -1,24 +1,86 @@
 ---
 title: Basic Commands
-description: The essential commands you’ll use most often.
+description: The commands you will use most often.
 ---
 
 # Basic Commands
 
-Once Kiai is in your server, you can start interacting with it immediately.  
-Here are the **core commands** every user should know:
+After you add Kiai to your server, you can use these commands right away.
 
-- **`/rank`**  
-  View your current level and XP progress, including how much XP is needed to reach the next level.
+## Commands for Everyone
 
-- **`/leaderboard`**  
-  See the top members in your server and how they rank against each other.
+- **`/rank [user]`**
+  Show your level and XP progress, including the XP needed for the next level. Check another member's rank by giving their name. You can also right-click a member and choose **Apps > Get User Rank**.
 
-- **`/preferences`**  
-  Open your personal Kiai settings. Here you can adjust notification preferences, control display options, and manage how Kiai interacts with you.
+- **`/leaderboard [type] [time]`**
+  Show the top members in your server, ranked by XP, messages sent, voice minutes, or XP streaks.
 
-- **/settings**
-  Here is where server settings are set for Kiai. You can set the minimum xp, ways that xp can be gained, and more in this menu!
+- **`/preferences`**
+  Open your personal Kiai settings. Adjust notification preferences, your rank card, and other display options here.
+
+- **`/premium`**
+  Check your premium status and your server's premium status.
+
+- **`/redeem <code>`**
+  Redeem a premium code.
+
+- **`/referral <code>`**
+  Register a referral code for this server.
+
+- **`/about`**
+  Show information about Kiai.
+
+- **`/ping`**
+  Check Kiai's response time.
+
+---
+
+## Commands for Server Managers
+
+These commands require the `Manage Server` permission.
+
+- **`/settings`**
+  Open the server settings menu. Set the minimum and maximum XP, the ways members can earn XP, and more.
+
+- **`/xp add | remove | set | reset | prune`**
+  Add, remove, set, or reset a member's or role's XP. Prune leveling data for members who left the server.
+
+- **`/cooldown set | list | clear`**
+  Manage the message XP cooldown, server-wide or per role.
+
+- **`/multiplier set | list | clear`**
+  Manage XP multipliers. See [Multipliers](multipliers.mdx).
+
+- **`/drop <amount> [channel]`**
+  Trigger an XP drop manually. See [Advanced XP Settings](advanced-xp.mdx).
+
+- **`/rewards add | remove | list | sync`**
+  Manage leveling rewards. See [Introduction to Rewards](introduction-to-rewards.mdx).
+
+- **`/leaderboard-roles add | remove | list | sync`**
+  Manage leaderboard position roles. See [Leaderboards](leaderboard.mdx).
+
+- **`/auto-leaderboard create | delete`**
+  Manage automatically updating leaderboards. See [Leaderboards](leaderboard.mdx).
+
+- **`/level-up-messages edit | clear | view | list`**
+  Manage the messages Kiai sends when a member levels up.
+
+- **`/application authorize | deauthorize | list`**
+  Manage which applications can access this server's data through the [Kiai API](api.mdx).
+
+- **`/export`**
+  Export your server's leveling data as a file.
+
+- **`/import <source>`**
+  Import leveling data from another leveling bot. See [Getting Started](getting-started.mdx).
+
+---
+
+## Commands for Administrators
+
+- **`/reset all | xp-only`**
+  Requires the `Administrator` permission. Resets your server's leveling data. `all` also resets settings, rewards, multipliers, and denylists. This action cannot be undone.
 
 ---
 

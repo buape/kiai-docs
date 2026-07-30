@@ -7,23 +7,45 @@ description: Learn about Kiai's leaderboard feature
 
 ## Regular Leaderboards
 
-Leaderboards are a great way to visualize activity among members over a time period or of all time. Leaderboards can be viewed by running the `/leaderboard` command.
+Run `/leaderboard [type] [time]` to view a leaderboard for your server.
 
-Leaderboards can track the following metrics:  
-- XP and Levels  
-- Messages Sent  
-- Voice Minutes  
-- XP Streaks  
+- **type**: `XP and Levels` (default), `Messages Sent`, `Voice Minutes`, or `XP Streaks`.
+- **time**: The time period the leaderboard covers. Defaults to all time.
 
-Additional options include:  
-- **Time:** Set the time period the leaderboard covers
+A leaderboard does not update on its own. Run the command again to see current standings.
 
-This type of leaderboard will not update unless the command is ran again and a new leaderboard is generated.
+On an XP leaderboard, a member who has reached the level cap shows `(Max)` next to their level instead of a level number past the cap.
+
+> XP Streak leaderboards are only available for the all-time period.
+
+> Weekly and monthly leaderboards are a gradually-rolled-out feature. If the `time` option does not offer a weekly or monthly period in your server, either the feature has not reached your server yet, or your server admin has not turned it on in `/settings > Time Leaderboards`.
+
+---
 
 ## Automatically Updating Leaderboards
 
-Kiai offers **automatically updating leaderboards**, which can be created using `/auto-leaderboard create`.  
+An auto-leaderboard is a leaderboard message that Kiai keeps up to date on its own, refreshing about once a minute.
 
-Automatically updating leaderboards can also be given a description which will add a custom description for the leaderboard display.  
+- `/auto-leaderboard create <channel> <type> [time] [description]` — Creates an auto-leaderboard in a channel. `description` adds up to 800 characters of text above the leaderboard.
+- `/auto-leaderboard delete <leaderboard>` — Deletes an existing auto-leaderboard.
 
-> Note: Some leaderboard features are **premium-only**.
+Both commands require the `Manage Server` permission.
+
+> Creating an auto-leaderboard requires **Server Premium**.
+
+---
+
+## Leaderboard Position Roles
+
+Leaderboard position roles differ from leveling rewards. Kiai grants and removes them automatically based on a member's **live rank** on the leaderboard, not their level, and re-checks them every time a member's XP changes.
+
+Manage leaderboard position roles with `/leaderboard-roles add`, `/leaderboard-roles remove`, `/leaderboard-roles list`, and `/leaderboard-roles sync`. These commands require the `Manage Server` permission.
+
+- `/leaderboard-roles add <role> <position> [time]` — Assigns a role to a leaderboard position. `position` can be First, Second, Third, "First through Third," or "First through Fifth." `time` can be All, This Week, or This Month, and defaults to All.
+- `/leaderboard-roles remove <reward>` — Removes a leaderboard position role.
+- `/leaderboard-roles list` — Lists every leaderboard position role.
+- `/leaderboard-roles sync` — Re-checks and re-applies every leaderboard position role.
+
+Kiai's own role must sit above the role you want to assign in your server's role list, and Kiai needs the **Manage Roles** permission to run `/leaderboard-roles sync`.
+
+Each role can be assigned to only one leaderboard position.

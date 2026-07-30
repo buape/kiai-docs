@@ -1,29 +1,43 @@
 ---
 title: Getting Started
-description: Get Started using Kiai
+description: Set up Kiai in your server.
 ---
 
 # Getting Started with Kiai
 
-## Add Kiai to your Server
-Go to kiai.app and click the [Add to Discord](https://go.buape.com/invite-kiai) link
+Follow these steps to set up Kiai in your server.
 
-From there Discord will ask you what server and with what permissions you would like to add Kiai to. It is recommended that you leave the invite permissions on the default.
+## 1. Add Kiai to Your Server
 
-If you change any of the permissions, some features may not work until the relevant permissions are given to the bot.
+1. Go to [kiai.app](https://kiai.app).
+2. Click [Add to Discord](https://go.buape.com/invite-kiai).
+3. Select your server.
+4. Keep the default permissions, unless you have a reason to change them.
 
-## Confirm Kiai can Respond
+If you change the default permissions, some features may not work until you grant the missing permissions.
 
-You can verify that the bot was successfully added to the server by running a command like `/ping` or `/rank` and ensuring that the bot replies successfully.
+---
 
-## Configure Kiai Settings
+## 2. Confirm Kiai Can Respond
 
-It is now the time to customize Kiai to meet your servers needs. It is recommended to start with your leveling settings like your Leveling Formula, cooldown, min/max, and more. For more infomation on customizing [XP Settings](customizing-xp.mdx), [Voice XP Settings](voice-xp.mdx), [Multipliers](multipliers.mdx), and more see their respective documentation pages.
+Run a command, such as `/ping` or `/rank`, and confirm that Kiai replies.
 
-### Importing Data
+---
 
-If you're migrating from another bot, you can import your data by using the /import command at this step.
+## 3. Configure Kiai's Settings
 
-## Configure Leveling Rewards
+Start with your leveling settings, such as the leveling formula, cooldown, and minimum and maximum XP. For more information, see [Customizing XP](customizing-xp.mdx), [Voice XP](voice-xp.mdx), and [Multipliers](multipliers.mdx).
 
-After getting Kiai all configured with the settings you desire, now you can set up all the leveling rewards that you like. Kiai offers many options when it comes to leveling rewards that can be learned more about on the [Leveling Rewards Page](introduction-to-rewards.mdx).
+### Import Existing Data
+
+If you migrate from another bot, use the `/import` command to bring over your data. Kiai imports from MEE6, AmariBot, Lurkr, CakeyBot, Tatsu, Gaius Play, Polaris, Discortics, LevelUp, Piggy, and its own `/export` files. Lurkr, CakeyBot, Polaris, LevelUp, and Kiai need a file upload from the source bot. Tatsu needs an API key from your Tatsu account, entered in the `api-key` option.
+
+Before you can import, your server's leveling data must be empty. Run `/reset` to clear it, then run `/import` within 5 minutes. Importing replaces the data types you select. It does not merge with existing data.
+
+> If you import "Other Settings" from LevelUp, Kiai also unlocks `/auto-leaderboard create` for your server for free, without needing Server Premium.
+
+---
+
+## 4. Set Up Leveling Rewards
+
+After you configure your settings, set up leveling rewards for your server. For more information, see the [Leveling Rewards](introduction-to-rewards.mdx) page.

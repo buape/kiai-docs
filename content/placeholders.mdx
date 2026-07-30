@@ -5,41 +5,60 @@ description: List of Kiai placeholders for messages and notifications.
 
 # Placeholders
 
-Kiai provides a set of **placeholders** that can be used in various locations, such as:  
-- Level Up messages  
-- XP Streak messages  
-- XP Drops  
+Kiai provides a set of **placeholders** that you can use in several places, such as:
+- Level-up messages
+- XP Streak messages
+- XP Drop messages
+- Custom Message rewards
+- Nickname rewards and the Nickname Format setting
 
-Not all placeholders are supported everywhere. If a placeholder is used in an unsupported location, it will display as-is in the message.
+Not every placeholder works in every location, since some locations do not have the data a placeholder needs. If you use an unsupported placeholder, it appears as plain text in the message instead of being replaced.
+
+---
+
+## Where Each Placeholder Works
+
+| Location | Supported placeholders |
+| --- | --- |
+| Level-up message | `{guild.*}`, `{user.*}`, `{level}`, `{level.new}`, `{level.old}`, `{rewards.*}` |
+| XP Streak message | `{guild.*}`, `{user.*}`, `{streak}`, `{bonus}` |
+| XP Drop message | `{guild.*}`, `{xp}`, `{expire}` |
+| Custom Message reward | `{guild.*}`, `{user.*}`, `{level}`, `{level.new}`, `{level.old}` |
+| Nickname reward / Nickname Format | `{guild.*}`, `{user.*}`, `{level}`, `{level.new}`, `{level.old}` |
+
+`{streak}` and `{bonus}` only work in XP Streak messages. `{expire}` only works in XP Drop messages. Webhook rewards do not support placeholders.
 
 ---
 
 ## List of Placeholders
 
-| Placeholder Name              | Example                                                                                    | Notes                                                                  |
-| ----------------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
-| `{guild.id}`                  | 744282929684938844                                                                         |                                                                        |
-| `{guild.name}`                | Buape Studios                                                                              |                                                                        |
-| `{guild.icon}`                | `https://cdn.discordapp.com/icons/744282929684938844/b0fb371b25e6689eff94692c63c0f7a5.png` |                                                                        |
-| `{guild.owner}`               | `<@439223656200273932>`                                                                    | Rendered as a mention on Discord                                       |
-| `{guild.owner.id}`            | 439223656200273932                                                                         |                                                                        |
-| `{user}`                      | `<@439223656200273932>`                                                                    | Rendered as a mention on Discord                                       |
-| `{user.mention}`              | `<@439223656200273932>`                                                                    | Rendered as a mention on Discord                                       |
-| `{user.id}`                   | 439223656200273932                                                                         |                                                                        |
-| `{user.tag}`                  | 4shadowed                                                                                  |                                                                        |
-| `{user.displayName}`          | Shadow                                                                                     |                                                                        |
-| `{user.discriminator}`        | 0                                                                                          | Discriminators are deprecated in Discord, included here for legacy     |
-| `{user.color}`                | #FF8D00                                                                                    |                                                                        |
-| `{user.avatar}`               | `https://cdn.discordapp.com/avatars/439223656200273932/b0fb371b25e6689eff94692c63c0f7a5.png` |                                                                        |
-| `{xp}`                        | 100                                                                                        |                                                                        |
-| `{level}`                     | 10                                                                                         |                                                                        |
-| `{level.old}`                 | 9                                                                                          |                                                                        |
-| `{level.new}`                 | 10                                                                                         |                                                                        |
-| `{rewards.roles.added}`       | `<@&439223656200273932>`                                                                   | Rendered as a mention on Discord                                       |
-| `{rewards.roles.removed}`     | `<@&439223656200273932>`                                                                   | Rendered as a mention on Discord                                       |
-| `{rewards.roles.added.ids}`   | 439223656200273932,744282929684938844                                                      |                                                                        |
-| `{rewards.roles.removed.ids}` | 439223656200273932,744282929684938844                                                      |                                                                        |
-| `{rewards.money}`             | 100                                                                                        |                                                                        |
-| `{rewards.money.total}`       | 100                                                                                        |                                                                        |
-| `{rewards.money.bank}`        | 100                                                                                        |                                                                        |
-| `{rewards.money.cash}`        | 100                                                                                        |                                                                        |
+| Placeholder Name | Example | Notes |
+| --- | --- | --- |
+| `{guild.id}` | 744282929684938844 | |
+| `{guild.name}` | Buape Studios | |
+| `{guild.icon}` | `https://cdn.discordapp.com/icons/744282929684938844/b0fb371b25e6689eff94692c63c0f7a5.png` | Falls back to a generic Discord icon if the server has none |
+| `{guild.owner}` | `<@439223656200273932>` | Rendered as a mention on Discord |
+| `{guild.owner.id}` | 439223656200273932 | |
+| `{user}` | `<@439223656200273932>` | Rendered as a mention on Discord |
+| `{user.mention}` | `<@439223656200273932>` | Same as `{user}` |
+| `{user.id}` | 439223656200273932 | |
+| `{user.username}` | 4shadowed | The member's Discord username |
+| `{user.globalName}` | Shadow | The member's Discord display name. Falls back to their username if they have not set one |
+| `{user.discriminator}` | 0 | Discriminators are deprecated on Discord and included here for legacy servers |
+| `{user.color}` | #ff8d00 | The member's Discord profile accent color, in lowercase hex. Resolves to `#` alone if the member has not set one |
+| `{user.avatar}` | `https://cdn.discordapp.com/avatars/439223656200273932/b0fb371b25e6689eff94692c63c0f7a5.png` | Falls back to a generic Discord avatar if the member has none |
+| `{xp}` | 100 | Only resolves where XP data is available, such as XP Drop messages |
+| `{level}` | 10 | Same as `{level.new}` |
+| `{level.old}` | 9 | The member's level before this change |
+| `{level.new}` | 10 | The member's level after this change |
+| `{streak}` | 7 | The member's current streak, in days. XP Streak messages only |
+| `{bonus}` | 15 | The bonus XP earned for the streak. XP Streak messages only |
+| `{expire}` | in 5 minutes | A relative time showing when a drop expires. XP Drop messages only |
+| `{rewards.roles.added}` | `<@&439223656200273932>` | Rendered as a mention on Discord |
+| `{rewards.roles.removed}` | `<@&439223656200273932>` | Rendered as a mention on Discord |
+| `{rewards.roles.added.ids}` | 439223656200273932,744282929684938844 | Reward IDs, not role IDs |
+| `{rewards.roles.removed.ids}` | 439223656200273932,744282929684938844 | Reward IDs, not role IDs |
+| `{rewards.money}` | 100 | Total money awarded across bank and cash rewards |
+| `{rewards.money.total}` | 100 | Same as `{rewards.money}` |
+| `{rewards.money.bank}` | 100 | Amounts of bank-only money rewards, listed separately, not summed |
+| `{rewards.money.cash}` | 100 | Amounts of cash-only money rewards, listed separately, not summed |

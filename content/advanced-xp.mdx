@@ -1,54 +1,85 @@
 ---
 title: Advanced XP Settings
-description: Configure advanced XP features like streaks, drops, and decay.
+description: Configure advanced XP features like streaks, drops, decay, and reactions.
 ---
 
 # Advanced XP Settings
 
-Kiai includes advanced XP features that let you reward consistent activity, create surprise bonuses, and maintain engagement over time. These include **XP Streaks**, **XP Drops**, and **XP Decay**.
-
----
+Kiai includes advanced XP features that reward consistent activity, create surprise bonuses, and keep members engaged over time. These features are **XP Streaks**, **XP Drops**, **XP Decay**, and **Reaction XP**.
 
 ## XP Streaks
 
-XP Streaks reward members for gaining a set amount of XP each day.
+XP Streaks reward members for earning XP on consecutive days.
 
-- Enable in `/settings > XP Streaks`.  
-- Choose a channel for streak notifications.  
-- Advanced streak configuration is available to **premium guilds**.
+Configure XP Streaks in `/settings > XP Streaks`.
 
-**Example:**  
-A member earns 50 XP per day. If the streak threshold is set to 50 XP/day, they receive an extra 10 XP for maintaining a streak. After 3 consecutive days, the member’s bonus XP totals 30.
+- **XP Streaks**: Turns the feature on or off.
+- **XP Streak Announcement Channel**: The channel where streak milestone announcements are sent. If you leave this unset, Kiai sends the announcement in the last channel the member was active in. If neither is available, Kiai does not send an announcement for that milestone.
+- **Minimum Days for Streak Bonus** (premium): How many consecutive active days a member needs before Kiai announces and logs their streak. A member still earns their streak bonus XP each day starting on day 1. This setting controls only when the streak becomes visible to the server.
+- **Minimum XP per Day Required** (premium): The XP a member must earn from messages in a day for that day to count toward their streak.
+- **Bonus XP per Streak Day** (premium): The bonus XP a member earns for each day they keep their streak.
+- **XP Streak Message** (premium): The message sent when Kiai announces a streak milestone. The message must include `{streak}`.
+
+**Example:**
+Minimum Days for Streak Bonus is 3, Minimum XP per Day is 50, and Bonus XP per Streak Day is 10. A member earns at least 50 XP from messages on each of 3 consecutive days. They earn 10 bonus XP starting on day 1, but Kiai only announces and logs the streak once they pass day 3.
+
+Only XP earned from **messages** counts toward a streak. Voice XP, Reaction XP, and XP claimed from an XP Drop do not advance or maintain a member's streak.
 
 ---
 
 ## XP Drops
 
-XP Drops give members occasional bonus XP that can be claimed in chat.
+XP Drops give members occasional bonus XP that they can claim in chat.
 
-- Configure in `/settings > XP Drops`.  
-- Drops occur automatically based on the **Minimum Time Between Drops** or can be triggered manually with `/drop`.  
-- Each drop has an **Expire Time** and is limited by **Drops per Day**.  
-- XP amount is randomized between the configured **Minimum** and **Maximum XP**.  
-- You can customize the announcement message and what happens when a drop is claimed.
+Configure XP Drops in `/settings > XP Drops`.
 
-**Example:**  
-Every 30 minutes, a drop of 10–50 XP appears in `#general`. A member types `/drop` and claims 25 XP. If unclaimed, the drop expires after 5 minutes. The bot might announce:  
-> "🎉 An XP drop appeared! Claim it before it disappears!"
+- **XP Drops**: Turns the feature on or off.
+- **Drops per Day**: How many drops happen per day. Set between 1 and 100.
+- **Minimum Time Between Drops** and **Maximum Time Between Drops**: The range of time between drops. Set between 5 minutes and 24 hours.
+- **Drop Expiration Time**: How long a drop stays open before it expires. Set between 5 minutes and 7 days.
+- **Minimum XP Amount** and **Maximum XP Amount**: The range of XP a single drop can contain.
+- **Message**: The message sent when a drop appears. Use `{xp}` for the XP amount and `{expire}` for when the drop expires.
+- **Action After Claim**: What happens to the drop message after a member claims it. Choose **Edit Message**, which shows who claimed the drop, or **Delete Message**.
+
+A member with the `Manage Server` permission can also trigger a drop manually with `/drop <amount> [channel]`.
+
+**Example:**
+Every 30 minutes, a drop of 10–50 XP appears in `#general`. A member types `/drop` and claims 25 XP. If no one claims it within 5 minutes, it expires.
+
+Kiai only triggers a drop in response to a member sending a message, using a random chance that rises over the course of the day toward your configured **Drops per Day**. A server with no message activity does not produce drops, even with the feature enabled. A drop is claimed on a first-come, first-served basis as the claim button stops working for everyone else as soon as one eligible member clicks it. Kiai only checks whether a drop has expired when someone clicks its button, so an unclaimed, expired drop can still show an active-looking button until someone tries to claim it.
 
 ---
 
 ## XP Decay
 
-XP Decay removes XP over time to encourage consistent participation.
+XP Decay removes XP from members over time to encourage ongoing participation.
 
-- Set the **XP Decay Amount** for how much XP is deducted.  
-- Use **XP Interval** to determine how often decay occurs.  
-- XP Decay affects all members automatically.
+Configure XP Decay in `/settings > XP Decay`.
 
-**Example:**  
-XP Decay is set to 5 XP every 24 hours. A member with 100 XP loses 5 XP daily if they do not earn new XP, encouraging ongoing activity to maintain levels.
+- **Status**: Turns the feature on or off.
+- **Interval**: How often decay happens. Set between 4 hours and 30 days.
+- **Amount**: How much XP is removed from each member when decay happens.
+
+**Example:**
+XP Decay is set to remove 5 XP every 24 hours. A member with 100 XP loses 5 XP each day they do not earn new XP, which encourages ongoing activity to maintain their level.
+
+XP Decay only affects a member if their current XP is greater than the decay amount. Kiai never reduces a member's XP below zero, and a member with less XP than the decay amount is left unchanged that cycle.
+
+Every time decay runs, Kiai can log it to a channel you choose. The log includes the number of members affected, the total XP removed, and a file listing each member's XP before and after decay (up to the first 5,000 members). See [Logging](logging.mdx) for setup steps.
 
 ---
 
-These features let you create dynamic and engaging progression systems, rewarding consistent activity while keeping your server active.
+## Reaction XP
+
+Reaction XP awards XP for reactions on messages. Both the member who adds a reaction and the member whose message receives it can earn XP.
+
+Configure Reaction XP in `/settings > Reaction XP`.
+
+- **Reaction XP**: Turns the feature on or off.
+- **Max Daily Reactions Eligible for XP**: How many reactions per member per day can earn XP when they **add** a reaction. This limit does not apply to XP a member earns when their own messages **receive** a reaction. That XP is uncapped.
+- **XP for Giving Reactions**: How much XP a member earns for adding a reaction.
+- **XP for Receiving Reactions**: How much XP the message author earns when their message receives a reaction.
+- **XP for Giving Super Reactions** (premium): How much XP a member earns for adding a Discord Super Reaction.
+- **XP for Receiving Super Reactions** (premium): How much XP the message author earns when their message receives a Super Reaction.
+
+A member does not earn XP for reacting to their own message. Bots, and reactions sent in direct messages, do not earn XP. Kiai processes Reaction XP in batches roughly every 5 minutes, so it does not appear immediately after a member reacts.

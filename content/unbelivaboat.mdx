@@ -1,31 +1,33 @@
 ---
 title: UnbelievaBoat Integration
-description: Learn about our Integration with UnbelievaBoat
+description: Learn about our integration with UnbelievaBoat
 ---
 
 # UnbelievaBoat Integration
 
-UnbelievaBoat is a commonly used economy bot for your discord bot. Kiai offers a integration where members receive currency as a level up reward.
+UnbelievaBoat is a common economy bot for Discord servers. Kiai can integrate with it to give members currency as a level-up reward.
 
-## Make sure UnbelievaBoat is in your server
+## Make Sure UnbelievaBoat Is in Your Server
 
-For this integration to work, you must have UnbelievaBoat in your server. You can learn more about UnbelievaBoat and find the link to invite the bot on their [Website](https://unbelievaboat.com/).
+For this integration to work, UnbelievaBoat must be in your server. Learn more about UnbelievaBoat and get the invite link on their [website](https://unbelievaboat.com/).
 
 ## Authorize Kiai
 
-Now that you have UnbelievaBoat in your server, you need to authoize Kiai to make changes to your economy. This will allow Kiai to give money to members of your server. 
+After you add UnbelievaBoat to your server, authorize Kiai to make changes to your economy. This lets Kiai give money to your members.
 
-UnbelievaBoat requires the person authorizing the application to have the Administrator permission. The link to authorize Kiai can be found here: https://unbelievaboat.com/applications/authorize?app_id=871968895648794818
+UnbelievaBoat requires the person who authorizes the application to have the **Administrator** permission. Authorize Kiai here: [https://unbelievaboat.com/applications/authorize?app_id=871968895648794818](https://unbelievaboat.com/applications/authorize?app_id=871968895648794818)
 
-Kiai only requires the "Access and edit this servers economy" permission.
+Kiai only requires the **"Access and edit this server's economy"** permission.
 
 ## Add the Money Reward
 
-At this point, all the setup for the integration has been completed and you can now utilize the `/rewards add money` command to give money to members for reaching certain levels.
+After you complete this setup, use the `/rewards add money` command to give members money for reaching a level. Kiai checks that UnbelievaBoat is in your server and authorized before it lets you create the reward. See [Introduction to Rewards](introduction-to-rewards.mdx) for the full list of reward types.
 
 The options for this command are:
 
-- **Amount:** The amount of money to which the member will recieve
-- **Level:** The level at which the reward will be given
-- **Bank:** This determines if the money will go to the members cash or bank total. The main difference is that cash money can be stolen while bank money can't. This option takes a True/False value.
-- **Required Role:** This optional parameter will only give out the reward if the member also has a certain role.
+- **Amount:** The amount of money the member receives.
+- **Level:** The level at which the reward is given.
+- **Bank:** Whether the money goes to the member's bank or cash balance. Cash can be stolen by other members; bank money cannot. This option takes a True/False value.
+- **Required Role:** An optional role. If set, a member must already hold this role to receive the reward.
+
+> If your UnbelievaBoat authorization is later revoked or changed, existing money rewards stop paying out until you reauthorize Kiai.
