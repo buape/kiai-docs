@@ -5,27 +5,35 @@ description: Learn how to boost XP for roles, channels, or your entire server.
 
 # Introduction to Multipliers
 
-Multipliers let you increase the XP gained by members in specific roles, channels, or globally for your server.  
+Multipliers increase the XP members earn from specific roles, channels, or your whole server.
 
-This is useful for rewarding certain members or encouraging activity in specific parts of your server.
-
----
+Use multipliers to reward certain members or to encourage activity in specific parts of your server.
 
 ## How Multipliers Work
 
-- **Role Multipliers**: Assign extra XP to members with a specific role.  
-- **Channel Multipliers**: Increase XP earned in selected channels.  
-- **Server Multiplier**: A global boost applied to all XP earned on the server.  
-- **Duration**: You can set multipliers to expire after a certain period.
+Manage multipliers with `/multiplier set`, `/multiplier list`, and `/multiplier clear`. These commands require the `Manage Server` permission.
+
+- **Role Multipliers**: Extra XP for members with a specific role.
+- **Channel Multipliers**: Extra XP for activity in a specific channel.
+- **Server Multiplier**: A multiplier applied to all XP earned in the server.
+- **Duration**: Add a length, such as `1h` or `3d`, to `/multiplier set` to make a multiplier temporary. Leave it out for a multiplier that does not expire.
+
+> A temporary multiplier that lasts longer than 24 hours requires **Server Premium**.
+
+Multipliers apply to XP from messages, voice activity, and reactions.
+
+---
+
+## How Multipliers Combine
+
+Role, channel, and server multipliers **multiply together**. They do not add. For example, a member with a 2x role multiplier, active in a channel with a 2x channel multiplier, on a server with a 2x server multiplier, earns 8x XP (2 × 2 × 2).
+
+Each channel or role can hold only one multiplier value at a time. Setting a new multiplier for the same channel or role replaces the old one.
 
 ---
 
 ## Examples
 
-- Give top leaderboard members extra XP for being highly active.  
-- Encourage chatting in certain channels by applying a higher XP multiplier there.  
-- Apply a temporary global server boost during events or special occasions.
-
----
-
-Multipliers are a flexible way to guide behavior, reward activity, and create temporary incentives for your community.
+- Give your top leaderboard members extra XP with a role multiplier.
+- Encourage activity in a specific channel with a channel multiplier.
+- Apply a temporary server multiplier during an event.

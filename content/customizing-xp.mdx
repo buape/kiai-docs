@@ -5,53 +5,48 @@ description: Configure how members earn XP and define leveling behavior.
 
 # Customizing XP Gain
 
-Kiai allows you to customize exactly how members earn XP in your server. You can adjust message XP, formulas, level caps, and reset behavior.
-
----
+Kiai lets you customize exactly how members earn XP in your server. You can adjust message XP, the leveling formula, level caps, and reset behavior.
 
 ## Message XP
 
-Message XP is awarded for chat activity. It is calculated randomly within your configured range and does not depend on message length.
+Message XP is awarded for chat activity. Kiai calculates it randomly within your configured range, and it does not depend on message length.
 
 Settings can be found in `/settings > Message XP`.
 
-- **XP Cooldown**: The time a member must wait before another message can grant XP.  
-- **Minimum XP per Message**: The smallest amount of XP a message can award.  
-- **Maximum XP per Message**: The largest amount of XP a message can award.  
-- **Level Cap**: The maximum level a member can reach. Members continue earning XP beyond this level, but it will not display above the cap.  
-- **Reset Member XP on Leave/Kick**: If enabled, a member’s XP is reset when they leave the server or are kicked.  
-- **Reset Member XP on Ban**: If enabled, a member’s XP is reset when they are banned from the server.
+- **Message XP**: Turns the feature on or off.
+- **XP Cooldown**: The time a member must wait between earning XP from messages.
+- **Minimum XP per Message**: The smallest amount of XP a message can award. Set between 1 and 100,000,000.
+- **Maximum XP per Message**: The largest amount of XP a message can award. Set between 1 and 100,000,000.
+- **Level Cap**: The highest level a member can reach. Once a member's XP reaches the amount needed for the cap, Kiai stops awarding them further XP from any source until you raise or remove the cap. Turn this setting off to remove the limit.
+- **Reset Member XP on Leave/Kick**: If enabled, a member's XP resets when they leave the server or are kicked.
+- **Reset Member XP on Ban**: If enabled, a member's XP resets when they are banned from the server.
 
-**Example:**  
-If Minimum XP is 5, Maximum XP is 15, and Cooldown is 60 seconds:  
-- A member sends a message and randomly receives between 5 and 15 XP.  
-- They must wait 60 seconds before their next message can grant XP.
+**Example:**
+If Minimum XP is 5, Maximum XP is 15, and Cooldown is 60 seconds:
+- A member sends a message and receives a random amount between 5 and 15 XP.
+- They must wait 60 seconds before their next message can earn XP.
+
+Kiai can also read proxy messages sent through Tupperbox or PluralKit and award XP for them. Configure it in `/settings > Proxy Messages`.
 
 ---
 
 ## XP Formula
 
-The XP Formula determines how much XP is needed to reach each level.
+The XP Formula determines how much XP a member needs to reach each level.
 
-- **Default formula**:  
+- **Default formula:**
 ```
 12 * ({level} * {level}) + {level} * 12
 ```
-You can visualize this formula here: [XP Visualizer](https://go.kiai.app/visualizer)
+Visualize this formula with the [XP Visualizer](https://go.kiai.app/visualizer).
 
-- `{level}` represents the member's current level and is required in custom formulas.  
-- Kiai does not support restarting XP at 0 for each level. To achieve a similar effect, add `+ {xp}` to your formula.
+- `{level}` represents the member's next level and is required in every custom formula.
+- Kiai does not support restarting XP at 0 for each level. To get a very similar effect, add `+ {xp}` to your formula.
 
-**Example:**  
-Custom formula:  
+**Example:**
+Custom formula:
 ```
 15 * ({level} * {level}) + {level} * 10 + {xp}
 ```
-- `{level}` calculates the base XP needed for the next level.  
-- `{xp}` ensures XP is cumulative across levels.
-
-This allows precise control over leveling speed and progression curves.
-
----
-
-By customizing XP gain and formulas, you can create unique progression experiences tailored to your server.
+- `{level}` calculates the base XP needed for the next level.
+- `{xp}` makes XP cumulative across levels.

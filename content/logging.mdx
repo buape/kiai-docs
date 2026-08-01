@@ -5,77 +5,81 @@ description: Learn how Kiai logs XP and server activity.
 
 # Logging
 
-Logging settings can be found in `/settings > Logging Channels`. From here, you can configure a variety of logs to keep track of XP activity, server changes, and errors.
-
----
+Configure logging in `/settings > Logging Channels`. Each log type below can be sent to up to 10 channels at once.
 
 ## Message XP
 
-Logs when a member receives XP for sending messages.  
-- Includes the **member** and **XP gained**.  
+Logs when a member receives XP for sending a message.
+- Includes the **member** and **XP gained**.
 
-**Example:**  
+**Example:**
 `User123 earned 12 XP for sending a message in #general.`
 
 ---
 
 ## Voice XP
 
-Logs when a member receives XP from voice activity.  
-- Includes the **member** and **XP gained**.  
+Logs when a member receives XP from voice activity.
+- Includes the **member** and **XP gained**.
 
-**Example:**  
+**Example:**
 `User123 earned 20 XP from voice activity in #voice-chat.`
 
 ---
 
 ## Manual XP Changes
 
-Logs when XP is set manually using commands like `/xp set`.  
-- Includes the **executor**, **target**, and **action performed**.  
+Logs when XP is set manually using commands like `/xp set`.
+- Includes the **executor**, **target**, and **action performed**.
 
-**Example:**  
+**Example:**
 `Admin456 set User123's XP to 500.`
 
 ---
 
 ## XP Decay
 
-Logs when XP Decay is triggered.  
-- Includes:  
-  - Number of members decayed  
-  - Total XP decayed  
-  - A file with user IDs showing their **before** and **after** XP (truncated at 5,000 users)  
+Logs when XP Decay is triggered.
+- Includes:
+  - Number of members decayed
+  - Total XP decayed
+  - A file with member IDs showing their **before** and **after** XP, listing the first 5,000 members
 
-**Example:**  
+**Example:**
 `XP Decay applied: 120 users lost 50 XP each.`
 
 ---
 
 ## XP Streaks
 
-Provides insight into streak-based XP gains.  
-- Logs **current streak** and **bonus XP** awarded for maintaining the streak.  
+Provides insight into streak-based XP gains.
+- Logs the member's **current streak** and the **bonus XP** awarded for maintaining it.
 
-**Example:**  
+**Example:**
 `User123 has a 7-day streak and earned 15 bonus XP.`
 
 ---
 
 ## Settings
 
-Logs whenever a Kiai setting is changed.  
-- Includes the **member** who made the change and the **new value**.  
+Logs whenever a Kiai setting is changed.
+- Includes the **member** who made the change and the **new value**.
 
-**Example:**  
+**Example:**
 `Admin456 changed "XP Cooldown" from 60s to 45s.`
 
 ---
 
 ## Errors
 
-Logs Kiai system errors to a designated channel.  
-- Includes an **Error ID** (a unique alphanumeric string) and a description to help support staff diagnose and resolve issues quickly.  
+Logs Kiai system errors to a channel you choose.
+- Includes an **Error ID** (a unique alphanumeric string) and a description, so support staff can diagnose and resolve issues quickly.
 
-**Example:**  
+**Example:**
 `Kiai Error ID ABC123xyz: Failed to calculate XP for User123 in #general.`
+
+---
+
+## Make All Interactions Ephemeral
+
+When enabled, every reply Kiai sends is visible only to the member who ran the command.

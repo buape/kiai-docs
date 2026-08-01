@@ -1,5 +1,25 @@
 {
-	"title": "Kiai Docs!",
+	"title": "Kiai Docs",
 	"root": true,
-	"pages": ["...", "---Packages---", "kiai.js"]
+	"pages": [
+		"index",
+		"what-is-kiai",
+		"basics",
+		"commands",
+		"getting-started",
+		"customizing-xp",
+		"voice-xp",
+		"advanced-xp",
+		"multipliers",
+		"denylists",
+		"introduction-to-rewards",
+		"customizing-rank-card",
+		"unbelivaboat",
+		"leaderboard",
+		"logging",
+		"placeholders",
+		"api",
+		"---Packages---",
+		"kiai.js"
+	]
 }

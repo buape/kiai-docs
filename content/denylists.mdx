@@ -5,39 +5,43 @@ description: How to prevent certain channels, roles, or members from earning XP.
 
 # Denylists
 
-Denylist settings can be found in `/settings > Denylist`.  
+Configure denylists in `/settings > Denylist`.
 
-Denylists apply to **all XP methods** (messages, voice, drops, etc.) and are a way to control who can earn XP in your server. Kiai supports three types of denylists: **Channels**, **Roles**, and **Users**.
+Denylists apply to **every way of earning XP**, including messages, voice activity, reactions, and XP drops. Kiai supports three types of denylists: **Channels**, **Roles**, and **Users**.
+
+Each denylist type holds up to 25 entries.
 
 ---
 
 ## Channels
 
-Channel denylists are useful for channels that:  
-- Are often spammed or flooded  
-- Are not intended for meaningful XP activity  
+A channel denylist stops XP from being earned in specific channels. You can add text channels, channel categories, voice channels, and forum channels.
 
-**Example:**  
-Excluding `#memes` ensures members don’t gain XP from posting there, keeping XP focused on productive discussion channels like `#general` or `#help`.
+Channel denylists work well for channels that:
+- Get spammed or flooded often
+- Are not meant for meaningful activity
+
+**Example:**
+Add `#memes` to the channel denylist so members do not earn XP there. This keeps XP focused on channels like `#general` or `#help`.
 
 ---
 
 ## Roles
 
-Role denylists remove XP earning from specific groups of members.  
+A role denylist stops XP from being earned by members who hold a specific role.
 
-**Example:**  
-You might exclude moderators or bots from earning XP to prevent them from dominating the leaderboard.
+**Example:**
+Add your moderator role to the role denylist so moderators do not earn XP and dominate the leaderboard.
 
 ---
 
 ## Users
 
-User denylists apply on a case-by-case basis. This is helpful for:  
-- Members who are abusing the XP system  
-- Disruptive behavior that would unfairly affect progression  
+A user denylist stops XP from being earned by a specific member.
 
-**Example:**  
-A member repeatedly spams messages to gain XP quickly. Excluding them stops further XP accumulation while maintaining fairness for others.
+User denylists work well for:
+- A member who is abusing the XP system
+- Disruptive behavior that would unfairly affect a member's progression
 
-Denylists can also be used strategically to prevent top-ranking leaderboard members from always dominating, encouraging more competitive and active participation across your community.
+**Example:**
+A member spams messages to gain XP quickly. Add them to the user denylist to stop further XP gain while keeping the system fair for other members.
