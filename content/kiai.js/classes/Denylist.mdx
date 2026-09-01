@@ -10,17 +10,17 @@ title: Denylist
 
 ### new Denylist()
 
-> **new Denylist**(`handler`): [`Denylist`](/docs/kiai.js/Denylist)
+> **new Denylist**(`handler`): [`Denylist`](/docs/kiai.js/classes/Denylist)
 
 #### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `handler` | [`RequestHandler`](/docs/kiai.js/RequestHandler) |
+| `handler` | [`RequestHandler`](/docs/kiai.js/classes/RequestHandler) |
 
 #### Returns
 
-[`Denylist`](/docs/kiai.js/Denylist)
+[`Denylist`](/docs/kiai.js/classes/Denylist)
 
 #### Inherited from
 
@@ -30,13 +30,13 @@ title: Denylist
 
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
-| <a id="_handler"></a> `_handler` | `public` | [`RequestHandler`](/docs/kiai.js/RequestHandler) | `BaseHandler._handler` |
+| <a id="_handler"></a> `_handler` | `public` | [`RequestHandler`](/docs/kiai.js/classes/RequestHandler) | `BaseHandler._handler` |
 
 ## Methods
 
 ### createDenylist()
 
-> **createDenylist**(`guildId`, `data`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`DenylistEntry`](/docs/type-aliases/DenylistEntry)\>
+> **createDenylist**(`guildId`, `data`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`DenylistEntry`](/docs/kiai.js/type-aliases/DenylistEntry)\>
 
 Create a new denylist entry
 
@@ -51,13 +51,13 @@ Create a new denylist entry
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`DenylistEntry`](/docs/type-aliases/DenylistEntry)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`DenylistEntry`](/docs/kiai.js/type-aliases/DenylistEntry)\>
 
 ***
 
 ### deleteAllDenylists()
 
-> **deleteAllDenylists**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/docs/type-aliases/CountResponse)\>
+> **deleteAllDenylists**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/docs/kiai.js/type-aliases/CountResponse)\>
 
 Delete all denylists for a guild
 
@@ -69,13 +69,13 @@ Delete all denylists for a guild
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/docs/type-aliases/CountResponse)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/docs/kiai.js/type-aliases/CountResponse)\>
 
 ***
 
 ### deleteAllDenylistsByType()
 
-> **deleteAllDenylistsByType**(`guildId`, `type`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/docs/type-aliases/CountResponse)\>
+> **deleteAllDenylistsByType**(`guildId`, `type`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/docs/kiai.js/type-aliases/CountResponse)\>
 
 Delete all denylists for a guild by type
 
@@ -88,13 +88,13 @@ Delete all denylists for a guild by type
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/docs/type-aliases/CountResponse)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/docs/kiai.js/type-aliases/CountResponse)\>
 
 ***
 
 ### deleteDenylistById()
 
-> **deleteDenylistById**(`guildId`, `type`, `id`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`DenylistEntry`](/docs/type-aliases/DenylistEntry)\>
+> **deleteDenylistById**(`guildId`, `type`, `id`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`DenylistEntry`](/docs/kiai.js/type-aliases/DenylistEntry)\>
 
 Delete a specific denylist entry
 
@@ -108,13 +108,13 @@ Delete a specific denylist entry
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`DenylistEntry`](/docs/type-aliases/DenylistEntry)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`DenylistEntry`](/docs/kiai.js/type-aliases/DenylistEntry)\>
 
 ***
 
 ### getDenylists()
 
-> **getDenylists**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Denylists`](/docs/type-aliases/Denylists)\>
+> **getDenylists**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Denylists`](/docs/kiai.js/type-aliases/Denylists)\>
 
 Get all denylists for a guild
 
@@ -126,4 +126,4 @@ Get all denylists for a guild
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Denylists`](/docs/type-aliases/Denylists)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Denylists`](/docs/kiai.js/type-aliases/Denylists)\>

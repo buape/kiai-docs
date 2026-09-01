@@ -10,17 +10,17 @@ title: Multipliers
 
 ### new Multipliers()
 
-> **new Multipliers**(`handler`): [`Multipliers`](/docs/kiai.js/Multipliers)
+> **new Multipliers**(`handler`): [`Multipliers`](/docs/kiai.js/classes/Multipliers)
 
 #### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `handler` | [`RequestHandler`](/docs/kiai.js/RequestHandler) |
+| `handler` | [`RequestHandler`](/docs/kiai.js/classes/RequestHandler) |
 
 #### Returns
 
-[`Multipliers`](/docs/kiai.js/Multipliers)
+[`Multipliers`](/docs/kiai.js/classes/Multipliers)
 
 #### Inherited from
 
@@ -30,13 +30,13 @@ title: Multipliers
 
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
-| <a id="_handler"></a> `_handler` | `public` | [`RequestHandler`](/docs/kiai.js/RequestHandler) | `BaseHandler._handler` |
+| <a id="_handler"></a> `_handler` | `public` | [`RequestHandler`](/docs/kiai.js/classes/RequestHandler) | `BaseHandler._handler` |
 
 ## Methods
 
 ### clearAllMultipliers()
 
-> **clearAllMultipliers**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/docs/type-aliases/CountResponse)\>
+> **clearAllMultipliers**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/docs/kiai.js/type-aliases/CountResponse)\>
 
 #### Parameters
 
@@ -46,30 +46,30 @@ title: Multipliers
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/docs/type-aliases/CountResponse)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/docs/kiai.js/type-aliases/CountResponse)\>
 
 ***
 
 ### createMultiplier()
 
-> **createMultiplier**(`guildId`, `data`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Multiplier`](/docs/type-aliases/Multiplier)\>
+> **createMultiplier**(`guildId`, `data`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Multiplier`](/docs/kiai.js/type-aliases/Multiplier)\>
 
 #### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
 | `guildId` | `string` |
-| `data` | [`Omit`](https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys)\<[`Multiplier`](/docs/type-aliases/Multiplier), `"id"`\> |
+| `data` | [`Omit`](https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys)\<[`Multiplier`](/docs/kiai.js/type-aliases/Multiplier), `"id"`\> |
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Multiplier`](/docs/type-aliases/Multiplier)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Multiplier`](/docs/kiai.js/type-aliases/Multiplier)\>
 
 ***
 
 ### getMultiplier()
 
-> **getMultiplier**(`guildId`, `type`, `id`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Multiplier`](/docs/type-aliases/Multiplier)\>
+> **getMultiplier**(`guildId`, `type`, `id`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Multiplier`](/docs/kiai.js/type-aliases/Multiplier)\>
 
 #### Parameters
 
@@ -81,13 +81,13 @@ title: Multipliers
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Multiplier`](/docs/type-aliases/Multiplier)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Multiplier`](/docs/kiai.js/type-aliases/Multiplier)\>
 
 ***
 
 ### getMultipliers()
 
-> **getMultipliers**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`MultiplierResponse`](/docs/type-aliases/MultiplierResponse)\>
+> **getMultipliers**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`MultiplierResponse`](/docs/kiai.js/type-aliases/MultiplierResponse)\>
 
 #### Parameters
 
@@ -97,4 +97,4 @@ title: Multipliers
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`MultiplierResponse`](/docs/type-aliases/MultiplierResponse)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`MultiplierResponse`](/docs/kiai.js/type-aliases/MultiplierResponse)\>
