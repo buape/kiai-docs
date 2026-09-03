@@ -18,6 +18,8 @@ Manage rewards with `/rewards add`, `/rewards remove`, `/rewards list`, and `/re
 
 Every reward type accepts an optional **Required Role**. If set, a member must already hold that role to receive the reward.
 
+When [Prestige](prestige.mdx) is enabled, every reward type also accepts a **Prestige** requirement. If set, the member must reach that prestige and level before receiving the reward.
+
 ## Roles
 
 **Required Permissions:**
@@ -96,9 +98,9 @@ When a member reaches the level, Kiai sends a signed JSON request to your endpoi
 
 ## Managing Rewards
 
-- `/rewards list` — Lists every reward on the server, grouped by level.
+- `/rewards list` — Lists every reward on the server, grouped by level and prestige when prestige is enabled.
 - `/rewards remove <reward>` — Removes a single reward.
-- `/rewards sync user [user]` — Re-checks and re-applies a member's role rewards to match their current level. Use this if you add or change rewards after a member has already reached that level.
+- `/rewards sync user [user]` — Re-checks and re-applies a member's role rewards to match their current level and prestige. Use this if you add or change rewards after a member has already reached that level.
 - `/rewards sync server` — Runs the same check for every member on the server.
 
 > Leaderboard position roles are a separate feature from rewards. They track a member's live leaderboard rank rather than their level. See [Leaderboards](leaderboard.mdx).
