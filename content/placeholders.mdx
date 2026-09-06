@@ -20,7 +20,7 @@ Not every placeholder works in every location, since some locations do not have 
 
 | Location | Supported placeholders |
 | --- | --- |
-| Level-up message | `{guild.*}`, `{user.*}`, `{level}`, `{level.new}`, `{level.old}`, `{rewards.*}` |
+| Level-up message | `{guild.*}`, `{user.*}`, `{level}`, `{level.new}`, `{level.old}`, `{prestige}`, `{rewards.*}` |
 | XP Streak message | `{guild.*}`, `{user.*}`, `{streak}`, `{bonus}` |
 | XP Drop message | `{guild.*}`, `{xp}`, `{expire}` |
 | Custom Message reward | `{guild.*}`, `{user.*}`, `{level}`, `{level.new}`, `{level.old}` |
@@ -51,6 +51,7 @@ Not every placeholder works in every location, since some locations do not have 
 | `{level}` | 10 | Same as `{level.new}` |
 | `{level.old}` | 9 | The member's level before this change |
 | `{level.new}` | 10 | The member's level after this change |
+| `{prestige}` | 2 | The member's current prestige. Level-up messages only |
 | `{streak}` | 7 | The member's current streak, in days. XP Streak messages only |
 | `{bonus}` | 15 | The bonus XP earned for the streak. XP Streak messages only |
 | `{expire}` | in 5 minutes | A relative time showing when a drop expires. XP Drop messages only |

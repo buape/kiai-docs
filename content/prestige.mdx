@@ -1,0 +1,94 @@
+---
+title: Prestige
+description: Let members reset XP and continue progressing with prestige ranks.
+---
+
+# Prestige
+
+Prestige lets members reset their XP back to 0 in exchange for increasing their **prestige** count. It is useful for servers where active members reach high levels and need a longer-term progression goal.
+
+> Prestige is a Server Premium feature.
+
+---
+
+## How Prestige Works
+
+When a member prestiges:
+
+- Their XP is reset to 0.
+- Their prestige count increases by 1.
+- Their level is recalculated from 0 XP.
+- Prestige can be shown on rank cards, used in leaderboards, and used for rewards.
+
+Members can prestige manually with `/prestige` once they meet the XP requirement.
+
+If **Automatic Prestige** is enabled, Kiai will prestige members automatically when they earn enough XP.
+
+---
+
+## Settings
+
+Prestige settings can be found in `/settings > Prestige`.
+
+- **Prestige**: Enables or disables the prestige system.
+- **Automatic Prestige**: Automatically prestiges members when they reach the requirement.
+- **Custom Prestige Name**: Changes the name shown for prestige on rank cards, such as `Tier` or `Ascension`.
+- **Prestige Requirement Formula**: Controls how much XP is required for the next prestige.
+
+The default requirement formula is:
+
+```txt
+12 * ((50 + ({prestige} * 10)) * (50 + ({prestige} * 10))) + (50 + ({prestige} * 10)) * 12
+```
+
+`{prestige}` represents the member's current prestige.
+
+With the default formula:
+
+- Prestige 0 requires Level 50 worth of XP.
+- Prestige 1 requires Level 60 worth of XP.
+- Prestige 2 requires Level 70 worth of XP.
+- Each prestige adds another 10 levels worth of XP to the requirement.
+
+You can use the [XP Calculator](https://kiai.app/calculator) to test prestige formulas.
+
+---
+
+## Prestige Rewards
+
+When prestige is enabled, rewards can target both a prestige and a level.
+
+**Example:**
+A role reward for **Prestige 2, Level 10** will only apply after a member has prestiged twice and reached Level 10 again.
+
+This lets you build reward paths that continue past the first leveling cycle.
+
+If **Automatic Prestige** is enabled, members prestige as soon as they reach the requirement. Rewards above that prestige's requirement level cannot be reached, so Kiai blocks those reward requirements instead of letting skipped rewards fire.
+
+If prestige is disabled later, Kiai preserves the stored prestige requirements on rewards. While disabled, rewards behave as level-only rewards until prestige is enabled again.
+
+---
+
+## Prestige Leaderboard
+
+Use `/leaderboard` and choose **Prestige** to view members ranked by prestige and XP.
+
+The normal XP leaderboard also accounts for prestige when prestige is enabled, so members with a higher prestige rank appear above members with lower prestige.
+
+Prestige leaderboards are only available for the all-time period.
+
+---
+
+## Level-up Message Placeholder
+
+Level-up messages support the `{prestige}` placeholder. Use it to show a member's current prestige in custom level-up messages.
+
+**Example:**
+
+```txt
+{user} reached level {level} at prestige {prestige}!
+```
+
+---
+
+Prestige is best for communities where members consistently reach higher levels and need a reason to keep earning XP after completing the normal progression curve.
