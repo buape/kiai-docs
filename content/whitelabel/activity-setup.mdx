@@ -1,0 +1,58 @@
+# Activity Setup
+
+This guide shows how to configure a Kiai whitelabel bot's Discord application so its dashboard opens as a Discord Activity.
+
+## 1. Open the whitelabel application
+
+1. Go to the [Discord Developer Portal](https://discord.com/developers/applications).
+2. Select your whitelabel bot application.
+3. Copy the **Application ID**.
+4. Confirm it matches the Client ID shown for the bot in the Kiai whitelabel dashboard.
+
+## 2. Set the URL mapping
+
+Open **Activities → URL Mappings**.
+
+Add this mapping:
+
+| Prefix | Target |
+| --- | --- |
+| `/` | `www.kiai.app` |
+
+Save changes.
+
+Discord's URL mapping target is a hostname, so enter `www.kiai.app` without `https://`.
+
+## 3. Enable Activities
+
+Open **Activities → Settings**.
+
+1. Turn on **Enable Activities**.
+2. Under **Supported Platforms**, enable every platform:
+	- Web
+	- iOS
+	- Android
+3. Save changes.
+
+## 4. Launch the Activity
+
+1. Open Discord.
+2. Open a server where the whitelabel bot is installed.
+3. Join a voice channel or open the Activity launcher in a supported channel.
+4. Launch the whitelabel bot's Activity.
+
+The Activity opens Kiai inside Discord and signs users in through Discord.
+
+## Troubleshooting
+
+### The Activity is not visible
+
+Confirm **Activities → Settings** has Activities enabled and all supported platforms checked.
+
+### The Activity opens a blank or broken page
+
+Confirm **Activities → URL Mappings** has exactly this mapping:
+
+```text
+/ -> www.kiai.app
+```

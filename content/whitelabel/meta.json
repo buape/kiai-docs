@@ -1,3 +1,7 @@
 {
-	"defaultOpen": true
+	"defaultOpen": true,
+	"pages": [
+		"intents",
+		"activity-setup"
+	]
 }
