@@ -20,6 +20,7 @@
 		"logging",
 		"placeholders",
 		"api",
+		"whitelabel",
 		"---Packages---",
 		"kiai.js"
 	]

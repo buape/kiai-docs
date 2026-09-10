@@ -1,0 +1,140 @@
+# Discord Privileged Intent Verification Copy/Paste Answers for Kiai Whitelabel Bots
+
+This is a copy/paste template for Discord's privileged intents form for Kiai whitelabel bots.
+
+Request **Server Members Intent** only. Leave **Presence Intent** and **Message Content Intent** unselected.
+
+---
+
+## What does your application do?
+
+```text
+This application is a whitelabel instance of Kiai, a Discord leveling and community engagement bot powered by Buape Studios LLC infrastructure.
+
+This application provides configurable XP, levels, leaderboards, rank cards, voice XP, message XP, reaction XP, XP drops, streaks, XP imports and exports, denylisted channels/roles/users, audit logs, and level-based rewards.
+
+The bot is controlled through Discord slash commands, buttons, modals, and the Kiai web dashboard. The whitelabel bot uses custom branding while running on Kiai’s backend systems.
+```
+
+## Do you have a public Privacy Policy telling your users about their data usage?
+
+```text
+Yes
+```
+
+## Where is your Privacy Policy available?
+
+```text
+https://www.buape.com/terms#5-privacy-policy
+```
+
+## Please share a link to your Privacy Policy.
+
+```text
+https://www.buape.com/terms#5-privacy-policy
+```
+
+## Which intents are you applying for?
+
+```text
+Server Members Intent
+```
+
+## Why do you need the Guild Members intent?
+
+```text
+This application needs the Guild Members intent for core leveling, XP cleanup, and reward synchronization features that depend on current server membership.
+
+This application uses guild member data for these server-admin-controlled features:
+
+1. Reset XP when members leave or are kicked. Server administrators can enable “Reset Member XP on Leave/Kick.” When enabled, the bot listens for member removal events and resets that member’s XP for that server.
+
+2. Reset XP when members are banned. Server administrators can enable “Reset Member XP on Ban.” When enabled, the bot listens for ban events and resets that member’s XP for that server.
+
+3. Prune XP for users who are no longer in the server. The bot provides an /xp prune command that compares the server’s current member list against stored leveling records, then lets administrators remove XP records for users who have left the server.
+
+4. Sync level reward roles and leaderboard roles. The bot can grant and remove roles based on a member’s level or leaderboard position. To do this safely, it needs current member and role membership data so reward roles can be reconciled correctly.
+
+This application only uses Guild Members data to provide leveling, XP cleanup, reward synchronization, and server-management functionality requested by server administrators. It does not sell member data, use member data for advertising profiles, or use member data for unrelated purposes.
+```
+
+## Please provide links to screenshots and/or videos that demonstrate your use case.
+
+```text
+The following screenshots demonstrate the Guild Members intent use cases used by Kiai whitelabel bots:
+
+Message XP settings showing Reset Member XP on Leave/Kick and Reset Member XP on Ban:
+https://github.com/buape/kiai-docs/blob/v2/assets/discord-privileged-intents/message-xp-settings.png
+
+/xp prune command for pruning users who left the server:
+https://github.com/buape/kiai-docs/blob/v2/assets/discord-privileged-intents/xp-prune-confirmation.png
+
+Leaderboard role sync command:
+https://github.com/buape/kiai-docs/blob/v2/assets/discord-privileged-intents/leaderboard-roles-sync.png
+
+Server reward sync command:
+https://github.com/buape/kiai-docs/blob/v2/assets/discord-privileged-intents/rewards-sync-server.png
+```
+
+## Are you storing any API Data off-platform, outside of Discord?
+
+```text
+Yes
+```
+
+## Explain what API Data you store off-platform.
+
+```text
+This application is powered by Kiai/Buape Studios LLC infrastructure and stores Discord API identifiers needed to connect the bot's leveling and reward features to the correct Discord resources.
+
+Stored Discord API data may include:
+
+- Discord user IDs
+- Discord server/guild IDs
+- Discord channel IDs
+- Discord role IDs
+- Discord message IDs for messages that caused XP or level events
+- Discord application/client IDs for this whitelabel bot instance
+
+This application does not store normal raw message contents from users.
+```
+
+## Why do you store this API Data off-platform?
+
+```text
+This application stores Discord API identifiers so its persistent leveling records can stay connected to the correct Discord users, servers, channels, roles, messages, and bot application.
+
+For example, the bot needs Discord user IDs and server IDs to know which member's XP record belongs to which server. It needs role IDs to grant or remove configured reward roles. It needs channel IDs to apply channel denylist rules, send level-up messages, and maintain configured leaderboard or log destinations. It needs message IDs to deduplicate XP events and reference the message that caused a level-up event.
+
+These Discord API identifiers are used only to operate the bot's leveling, reward, leaderboard, dashboard, support, security, and abuse-prevention features.
+```
+
+## Are you storing API Data for 30 days or less?
+
+```text
+No
+```
+
+## If no, explain why you store API Data for longer than 30 days.
+
+```text
+This application stores Discord API identifiers for longer than 30 days while the bot remains active in a server because those identifiers are required to keep the bot's persistent leveling records connected to the correct Discord users, servers, channels, roles, messages, and bot application.
+
+Deleting Discord user IDs, server IDs, channel IDs, role IDs, or relevant message IDs every 30 days would break core features such as persistent XP records, leaderboards, role rewards, denylist rules, level-up destinations, and XP pruning.
+
+Per Buape Studios LLC’s Privacy Policy, data relating to a guild or user is kept for 30 days after a guild has been removed from the services, then permanently deleted. Users or server administrators may request earlier deletion by contacting legal@buape.com.
+```
+
+## How do users contact you to request deletion of their activity data?
+
+```text
+Users and server administrators can request deletion of their data by contacting Buape Studios LLC at legal@buape.com.
+
+They may also contact support at support@buape.com for help with account, server, or bot data questions.
+```
+
+## Are you encrypting the data that you store at rest, as required by Discord Developer Policy?
+
+```text
+Yes
+```
