@@ -1,3 +1,7 @@
 {
-	"defaultOpen": true
+	"defaultOpen": true,
+	"pages": [
+		"discord-privileged-intents-template",
+		"discord-activity-dev-portal"
+	]
 }
