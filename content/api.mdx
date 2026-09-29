@@ -9,25 +9,26 @@ Kiai provides a public API that lets developers extend the bot's functionality.
 
 ## API Endpoints
 
-Find the full list of endpoints and request/response shapes at [https://kiai.app/api/v2/docs](https://kiai.app/api/v2/docs).
+Find the full list of endpoints and request/response shapes at [https://kiai.app/api/v3/docs](https://kiai.app/api/v3/docs).
 
 Every endpoint is scoped to a server (`guildId`) and requires a specific permission on your application:
 
 | Method | Path | Permission required |
 | --- | --- | --- |
-| GET | `/api/v2/me` | Any valid token |
-| POST | `/api/v2/virtual_message` | Levels |
-| GET | `/api/v2/:guildId/leaderboard` | Levels |
-| GET | `/api/v2/:guildId/member/:userId` | Levels |
-| PATCH | `/api/v2/:guildId/member/:userId/xp` | Levels |
-| PUT | `/api/v2/:guildId/member/:userId/xp` | Levels |
-| GET | `/api/v2/:guildId/settings` | Levels |
-| GET, POST, DELETE | `/api/v2/:guildId/denylist` | Denylist |
-| GET, POST, DELETE | `/api/v2/:guildId/multipliers` | Multipliers |
-| GET, POST, DELETE | `/api/v2/:guildId/rewards` | Rewards |
-| GET, POST, DELETE | `/api/v2/:guildId/leaderboard-roles` | Rewards |
+| GET | `/api/v3/me` | Any valid token |
+| POST | `/api/v3/virtual_message` | Levels |
+| GET | `/api/v3/:guildId/leaderboard` | Levels |
+| GET | `/api/v3/:guildId/member/:userId` | Levels |
+| PATCH | `/api/v3/:guildId/member/:userId/xp` | Levels |
+| PUT | `/api/v3/:guildId/member/:userId/xp` | Levels |
+| GET | `/api/v3/:guildId/settings` | Levels |
+| GET, POST, DELETE | `/api/v3/:guildId/denylist` | Denylist |
+| GET, POST, DELETE | `/api/v3/:guildId/multipliers` | Multipliers |
+| GET, DELETE | `/api/v3/:guildId/rewards/:rewardId` | Rewards |
+| POST | `/api/v3/:guldId/rewards` | Rewards |
+| GET, POST, DELETE | `/api/v3/:guildId/leaderboard-roles` | Rewards |
 
-`GET /api/v2/me` returns your application's own ID, owning user, rate limit, and the list of permissions it holds in each authorized server. Use it to confirm your token works and to check what it can do.
+`GET /api/v3/me` returns your application's own ID, owning user, rate limit, and the list of permissions it holds in each authorized server. Use it to confirm your token works and to check what it can do.
 
 ---
 
