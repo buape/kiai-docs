@@ -1,0 +1,32 @@
+---
+title: Proxy Messages
+description: Earn XP for messages sent through PluralKit, PluralBuddy, and Plural.gg.
+---
+
+# PluralKit, PluralBuddy, and Plural.gg
+
+Kiai can award XP for messages sent through [PluralKit](https://pluralkit.me/), [PluralBuddy](https://pluralbuddy.app/), and [Plural.gg](https://plural.gg/).
+
+Configure each service in `/settings > Proxy Messages`:
+
+- **PluralKit Enabled**
+- **PluralBuddy Enabled**
+- **Plural.gg Enabled**
+
+Each setting is off by default. Message XP must also be enabled. See [Customizing XP](customizing-xp.mdx) for more information.
+
+## How Proxy XP Works
+
+For each new Discord message, Kiai checks the proxy services enabled in your server settings. It asks each service whether that specific message was proxied and which member or alter sent it. If the service recognizes the message, Kiai awards XP to that proxy identity instead of the system's Discord account. Kiai does not import old messages or award XP retroactively.
+
+Kiai tracks each proxy member or alter as a separate identity linked to the Discord account that sent its messages. If none of the enabled services recognizes a message, Kiai processes it as a regular Discord message.
+
+Proxy messages follow the same XP rules as other messages, where Message XP must be enabled, and denylists, cooldowns, and multipliers still apply.
+
+Members can turn on **Bypass Fronter** in `/preferences` to have Kiai skip proxy lookups and use their Discord identity for messages instead.
+
+## Leaderboards and Rank Cards
+
+Each proxy identity has its own XP and message data. On a leaderboard, it appears as a separate entry under the proxy member's or alter's name, with stats for the selected leaderboard, such as XP or messages sent.
+
+Use `/rank` to check an account's rank. For PluralKit, Kiai includes the system's current fronter or fronters, not every member in the system. For PluralBuddy and Plural.gg, Kiai includes the account's proxy identities that have Kiai records. Kiai sends a separate rank card for each included identity. Each card shows the proxy's name, level, XP progress, and leaderboard position. The XP is not combined into one system total.
