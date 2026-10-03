@@ -1,0 +1,73 @@
+---
+title: RewardCapabilities
+---
+
+> **RewardCapabilities** = `object`
+
+## Properties
+
+### limits
+
+> **limits**: `object`
+
+| Name | Type |
+| ------ | ------ |
+| `maximumMoneyAmount` | `number` |
+| `maximumTemporaryRoleDurationMs` | `number` |
+| `maximumWebhookEndpointLength` | `number` |
+| `messageLength` | `number` |
+| `nicknameLength` | `number` |
+| `webhookHttpsOnly` | `boolean` |
+
+***
+
+### prestige
+
+> **prestige**: `object`
+
+| Name | Type |
+| ------ | ------ |
+| `automatic` | `boolean` |
+| `enabled` | `boolean` |
+
+***
+
+### providers
+
+> **providers**: `object`
+
+| Name | Type |
+| ------ | ------ |
+| `unbelievaboat` | `object` |
+| `unbelievaboat.authorized` | `boolean` |
+| `unbelievaboat.inGuild` | `boolean` |
+
+***
+
+### reconciliation
+
+> **reconciliation**: `object`
+
+| Name | Type |
+| ------ | ------ |
+| `active` | `boolean` |
+| `cooldownSeconds` | `number` |
+| `kind` | `"declarative"` |
+
+***
+
+### reversal
+
+> **reversal**: `object`
+
+| Name | Type |
+| ------ | ------ |
+| `money` | `boolean` |
+| `nicknames` | `boolean` |
+| `roles` | `boolean` |
+
+***
+
+### types
+
+> **types**: [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, \{ `availability`: `"enabled"` \| `"preview"` \| `"hidden"`; `creatable`: `boolean`; `kind`: `"declarative"` \| `"imperative"`; `premiumRequired`: `boolean`; `reason`: `string` \| `null`; \}\>

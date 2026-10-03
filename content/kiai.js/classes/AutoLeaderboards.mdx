@@ -1,0 +1,100 @@
+---
+title: AutoLeaderboards
+---
+
+## Extends
+
+- `BaseHandler`
+
+## Constructors
+
+### Constructor
+
+> **new AutoLeaderboards**(`handler`): `AutoLeaderboards`
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `handler` | [`RequestHandler`](/docs/kiai.js/classes/RequestHandler) |
+
+#### Returns
+
+`AutoLeaderboards`
+
+#### Inherited from
+
+`BaseHandler.constructor`
+
+## Properties
+
+| Property | Modifier | Type | Inherited from |
+| ------ | ------ | ------ | ------ |
+| <a id="property-_handler"></a> `_handler` | `public` | [`RequestHandler`](/docs/kiai.js/classes/RequestHandler) | `BaseHandler._handler` |
+
+## Methods
+
+### createAutoLeaderboard()
+
+> **createAutoLeaderboard**(`guildId`, `data`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`AutoLeaderboard`](/docs/kiai.js/type-aliases/AutoLeaderboard)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `data` | [`CreateAutoLeaderboard`](/docs/kiai.js/type-aliases/CreateAutoLeaderboard) |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`AutoLeaderboard`](/docs/kiai.js/type-aliases/AutoLeaderboard)\>
+
+***
+
+### deleteAutoLeaderboard()
+
+> **deleteAutoLeaderboard**(`guildId`, `id`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`AutoLeaderboard`](/docs/kiai.js/type-aliases/AutoLeaderboard)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `id` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`AutoLeaderboard`](/docs/kiai.js/type-aliases/AutoLeaderboard)\>
+
+***
+
+### getAutoLeaderboard()
+
+> **getAutoLeaderboard**(`guildId`, `id`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`AutoLeaderboard`](/docs/kiai.js/type-aliases/AutoLeaderboard)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `id` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`AutoLeaderboard`](/docs/kiai.js/type-aliases/AutoLeaderboard)\>
+
+***
+
+### getAutoLeaderboards()
+
+> **getAutoLeaderboards**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`AutoLeaderboard`](/docs/kiai.js/type-aliases/AutoLeaderboard)[]\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`AutoLeaderboard`](/docs/kiai.js/type-aliases/AutoLeaderboard)[]\>

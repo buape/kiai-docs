@@ -2,22 +2,47 @@
 title: VirtualMessage
 ---
 
-> **VirtualMessage**: `object`
+> **VirtualMessage** = `object`
 
-Virtual message types
+## Properties
 
-## Type declaration
+### channel
+
+> **channel**: `object`
 
 | Name | Type |
 | ------ | ------ |
-| <a id="channel"></a> `channel` | `object` |
-| `channel.id` | `string` |
-| `channel.parentId`? | `string` |
-| <a id="guild"></a> `guild` | `object` |
-| `guild.id` | `string` |
-| <a id="member"></a> `member` | `object` |
-| `member.id` | `string` |
-| `member.roleIds` | `string`[] |
-| <a id="message"></a> `message` | `object` |
-| `message.content`? | `string` |
-| `message.id` | `string` |
+| `id` | `string` |
+| `parentId?` | `string` |
+
+***
+
+### guild
+
+> **guild**: `object`
+
+| Name | Type |
+| ------ | ------ |
+| `id` | `string` |
+
+***
+
+### member
+
+> **member**: `object`
+
+| Name | Type |
+| ------ | ------ |
+| `id` | `string` |
+| `roleIds` | `string`[] |
+
+***
+
+### message
+
+> **message**: `object`
+
+| Name | Type |
+| ------ | ------ |
+| `content?` | `string` |
+| `id` | `string` |

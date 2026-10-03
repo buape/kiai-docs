@@ -2,10 +2,15 @@
 title: ChannelMultiplier
 ---
 
-> **ChannelMultiplier**: [`BaseMultiplier`](/docs/kiai.js/type-aliases/BaseMultiplier) & `object`
+> **ChannelMultiplier** = [`Extract`](https://www.typescriptlang.org/docs/handbook/utility-types.html#extracttype-union)\<[`CreateMultiplier`](/docs/kiai.js/type-aliases/CreateMultiplier), \{ `channelId`: `string`; \}\> & `object`
 
-## Type declaration
+## Type Declaration
 
 | Name | Type |
 | ------ | ------ |
-| `channelId` | `string` |
+| `guildId?` | `string` |
+| `type?` | `"channel"` |
+
+## Deprecated
+
+Use CreateMultiplier; the v3 API infers the type from channelId or roleId.

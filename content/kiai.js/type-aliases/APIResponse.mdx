@@ -2,9 +2,7 @@
 title: APIResponse
 ---
 
-> **APIResponse**\<`T`\>: `object`
-
-Base response types
+> **APIResponse**\<`T`\> = `object`
 
 ## Type Parameters
 
@@ -12,10 +10,20 @@ Base response types
 | ------ |
 | `T` |
 
-## Type declaration
+## Properties
 
-| Name | Type |
-| ------ | ------ |
-| <a id="data"></a> `data` | `T` |
-| <a id="headers"></a> `headers` | [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `string`\> |
-| <a id="status"></a> `status` | `number` |
+### data
+
+> **data**: `T`
+
+***
+
+### headers
+
+> **headers**: [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `string`\>
+
+***
+
+### status
+
+> **status**: `number`

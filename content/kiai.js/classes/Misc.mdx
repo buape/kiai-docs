@@ -8,9 +8,9 @@ title: Misc
 
 ## Constructors
 
-### new Misc()
+### Constructor
 
-> **new Misc**(`handler`): [`Misc`](/docs/kiai.js/classes/Misc)
+> **new Misc**(`handler`): `Misc`
 
 #### Parameters
 
@@ -20,7 +20,7 @@ title: Misc
 
 #### Returns
 
-[`Misc`](/docs/kiai.js/classes/Misc)
+`Misc`
 
 #### Inherited from
 
@@ -30,15 +30,121 @@ title: Misc
 
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
-| <a id="_handler"></a> `_handler` | `public` | [`RequestHandler`](/docs/kiai.js/classes/RequestHandler) | `BaseHandler._handler` |
+| <a id="property-_handler"></a> `_handler` | `public` | [`RequestHandler`](/docs/kiai.js/classes/RequestHandler) | `BaseHandler._handler` |
 
 ## Methods
 
+### exportGuild()
+
+> **exportGuild**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`GuildExportResponse`](/docs/kiai.js/type-aliases/GuildExportResponse)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`GuildExportResponse`](/docs/kiai.js/type-aliases/GuildExportResponse)\>
+
+***
+
+### getFeaturePreviews()
+
+> **getFeaturePreviews**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`FeaturePreview`](/docs/kiai.js/type-aliases/FeaturePreview)[]\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`FeaturePreview`](/docs/kiai.js/type-aliases/FeaturePreview)[]\>
+
+***
+
+### getGuildBlacklist()
+
+> **getGuildBlacklist**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`BlacklistStatus`](/docs/kiai.js/type-aliases/BlacklistStatus)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`BlacklistStatus`](/docs/kiai.js/type-aliases/BlacklistStatus)\>
+
+***
+
+### getGuildPremium()
+
+> **getGuildPremium**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`PremiumStatus`](/docs/kiai.js/type-aliases/PremiumStatus)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`PremiumStatus`](/docs/kiai.js/type-aliases/PremiumStatus)\>
+
+***
+
+### getMemberBlacklist()
+
+> **getMemberBlacklist**(`guildId`, `userId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`BlacklistStatus`](/docs/kiai.js/type-aliases/BlacklistStatus)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `userId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`BlacklistStatus`](/docs/kiai.js/type-aliases/BlacklistStatus)\>
+
+***
+
+### getMemberPremium()
+
+> **getMemberPremium**(`guildId`, `userId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`PremiumStatus`](/docs/kiai.js/type-aliases/PremiumStatus)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `userId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`PremiumStatus`](/docs/kiai.js/type-aliases/PremiumStatus)\>
+
+***
+
 ### getSelf()
 
-> **getSelf**(): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`MeResponse`](/docs/kiai.js/type-aliases/MeResponse)\>
+> **getSelf**(`options?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`MeResponse`](/docs/kiai.js/type-aliases/MeResponse)\>
 
-Get information about the current application
+Get information about the current application.
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `options` | \{ `guildId?`: `string`; `locale?`: `string`; \} |
+| `options.guildId?` | `string` |
+| `options.locale?` | `string` |
 
 #### Returns
 
@@ -50,14 +156,32 @@ Get information about the current application
 
 > **postVirtualMessage**(`message`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/docs/kiai.js/type-aliases/SuccessResponse)\>
 
-Post a virtual message
+Send a virtual message to the API.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `message` | [`VirtualMessage`](/docs/kiai.js/type-aliases/VirtualMessage) | The message to post |
+| Parameter | Type |
+| ------ | ------ |
+| `message` | [`VirtualMessage`](/docs/kiai.js/type-aliases/VirtualMessage) |
 
 #### Returns
 
 [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/docs/kiai.js/type-aliases/SuccessResponse)\>
+
+***
+
+### triggerXpDrop()
+
+> **triggerXpDrop**(`guildId`, `channelId`, `amount`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`XpDropResponse`](/docs/kiai.js/type-aliases/XpDropResponse)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `channelId` | `string` |
+| `amount` | `number` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`XpDropResponse`](/docs/kiai.js/type-aliases/XpDropResponse)\>

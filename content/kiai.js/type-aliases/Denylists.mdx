@@ -2,13 +2,43 @@
 title: Denylists
 ---
 
-> **Denylists**: `object`
+> **Denylists** = `object`
 
-## Type declaration
+## Properties
+
+### channels
+
+> **channels**: `object`[]
 
 | Name | Type |
 | ------ | ------ |
-| <a id="channels"></a> `channels` | [`DenylistEntry`](/docs/kiai.js/type-aliases/DenylistEntry)[] |
-| <a id="guildid"></a> `guildId` | `string` |
-| <a id="roles"></a> `roles` | [`DenylistEntry`](/docs/kiai.js/type-aliases/DenylistEntry)[] |
-| <a id="users"></a> `users` | [`DenylistEntry`](/docs/kiai.js/type-aliases/DenylistEntry)[] |
+| `channelId` | `string` |
+| `id` | `string` |
+
+***
+
+### guildId
+
+> **guildId**: `string`
+
+***
+
+### roles
+
+> **roles**: `object`[]
+
+| Name | Type |
+| ------ | ------ |
+| `id` | `string` |
+| `roleId` | `string` |
+
+***
+
+### users
+
+> **users**: `object`[]
+
+| Name | Type |
+| ------ | ------ |
+| `id` | `string` |
+| `userId` | `string` |

@@ -8,9 +8,9 @@ title: Leveling
 
 ## Constructors
 
-### new Leveling()
+### Constructor
 
-> **new Leveling**(`handler`): [`Leveling`](/docs/kiai.js/classes/Leveling)
+> **new Leveling**(`handler`): `Leveling`
 
 #### Parameters
 
@@ -20,7 +20,7 @@ title: Leveling
 
 #### Returns
 
-[`Leveling`](/docs/kiai.js/classes/Leveling)
+`Leveling`
 
 #### Inherited from
 
@@ -30,7 +30,7 @@ title: Leveling
 
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
-| <a id="_handler"></a> `_handler` | `public` | [`RequestHandler`](/docs/kiai.js/classes/RequestHandler) | `BaseHandler._handler` |
+| <a id="property-_handler"></a> `_handler` | `public` | [`RequestHandler`](/docs/kiai.js/classes/RequestHandler) | `BaseHandler._handler` |
 
 ## Methods
 
@@ -54,15 +54,15 @@ title: Leveling
 
 ### getLeaderboard()
 
-> **getLeaderboard**(`guildId`, `start`?, `end`?): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Leaderboard`](/docs/kiai.js/type-aliases/Leaderboard)\>
+> **getLeaderboard**(`guildId`, `optionsOrStart?`, `legacyEnd?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Leaderboard`](/docs/kiai.js/type-aliases/Leaderboard)\>
 
 #### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
 | `guildId` | `string` |
-| `start`? | `number` |
-| `end`? | `number` |
+| `optionsOrStart?` | `number` \| [`LeaderboardOptions`](/docs/kiai.js/type-aliases/LeaderboardOptions) |
+| `legacyEnd?` | `number` |
 
 #### Returns
 
@@ -72,7 +72,7 @@ title: Leveling
 
 ### getMember()
 
-> **getMember**(`guildId`, `userId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`LevelData`](/docs/kiai.js/type-aliases/LevelData)\>
+> **getMember**(`guildId`, `userId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`LevelData`](/docs/kiai.js/type-aliases/LevelData) \| `null`\>
 
 #### Parameters
 
@@ -83,7 +83,40 @@ title: Leveling
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`LevelData`](/docs/kiai.js/type-aliases/LevelData)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`LevelData`](/docs/kiai.js/type-aliases/LevelData) \| `null`\>
+
+***
+
+### getStats()
+
+> **getStats**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`GuildStats`](/docs/kiai.js/type-aliases/GuildStats)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`GuildStats`](/docs/kiai.js/type-aliases/GuildStats)\>
+
+***
+
+### prestige()
+
+> **prestige**(`guildId`, `userId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`PrestigeResponse`](/docs/kiai.js/type-aliases/PrestigeResponse)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `userId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`PrestigeResponse`](/docs/kiai.js/type-aliases/PrestigeResponse)\>
 
 ***
 

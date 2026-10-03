@@ -9,9 +9,9 @@ You can technically use this class directly, but it's recommended to use the cli
 
 ## Constructors
 
-### new RequestHandler()
+### Constructor
 
-> **new RequestHandler**(`baseURL`, `apiKey`, `debug`, `fetchFunction`): [`RequestHandler`](/docs/kiai.js/classes/RequestHandler)
+> **new RequestHandler**(`baseURL`, `apiKey`, `debug?`, `fetchFunction?`): `RequestHandler`
 
 #### Parameters
 
@@ -20,26 +20,26 @@ You can technically use this class directly, but it's recommended to use the cli
 | `baseURL` | `string` | `undefined` |
 | `apiKey` | `string` | `undefined` |
 | `debug` | `boolean` | `false` |
-| `fetchFunction` | (`url`, `init`?) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Response`](https://developer.mozilla.org/docs/Web/API/Response)\> | `fetch` |
+| `fetchFunction` | (`url`, `init?`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Response`](https://developer.mozilla.org/docs/Web/API/Response)\> | `fetch` |
 
 #### Returns
 
-[`RequestHandler`](/docs/kiai.js/classes/RequestHandler)
+`RequestHandler`
 
 ## Properties
 
 | Property | Type |
 | ------ | ------ |
-| <a id="apikey-1"></a> `apiKey` | `string` |
-| <a id="baseurl-1"></a> `baseURL` | `string` |
-| <a id="debug-1"></a> `debug` | `boolean` |
-| <a id="fetchfunction-1"></a> `fetchFunction` | (`url`: `string` \| [`URL`](https://developer.mozilla.org/docs/Web/API/URL), `init`?: `RequestInit`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Response`](https://developer.mozilla.org/docs/Web/API/Response)\> |
+| <a id="property-apikey"></a> `apiKey` | `string` |
+| <a id="property-baseurl"></a> `baseURL` | `string` |
+| <a id="property-debug"></a> `debug` | `boolean` |
+| <a id="property-fetchfunction"></a> `fetchFunction` | (`url`, `init?`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Response`](https://developer.mozilla.org/docs/Web/API/Response)\> |
 
 ## Methods
 
 ### request()
 
-> **request**\<`T`\>(`endpoint`, `method`, `query`, `body`, `noError`, `customBaseUrl`?): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
+> **request**\<`T`\>(`endpoint`, `method?`, `query?`, `body?`, `noError?`, `customBaseUrl?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<`T`\>
 
 #### Type Parameters
 
@@ -56,7 +56,7 @@ You can technically use this class directly, but it's recommended to use the cli
 | `query` | [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `string` \| `number` \| `boolean`\> | `{}` |
 | `body` | [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `unknown`\> | `{}` |
 | `noError` | `boolean` | `false` |
-| `customBaseUrl`? | `string` | `undefined` |
+| `customBaseUrl?` | `string` | `undefined` |
 
 #### Returns
 
