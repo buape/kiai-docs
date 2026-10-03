@@ -2,20 +2,17 @@
 title: kiai.js
 ---
 
-## Enumerations
-
-| Enumeration | Description |
-| ------ | ------ |
-| [ApiPermission](/docs/kiai.js/enumerations/ApiPermission) | Permission types |
-
 ## Classes
 
 | Class | Description |
 | ------ | ------ |
+| [AutoLeaderboards](/docs/kiai.js/classes/AutoLeaderboards) | - |
+| [Cooldowns](/docs/kiai.js/classes/Cooldowns) | - |
 | [Denylist](/docs/kiai.js/classes/Denylist) | - |
 | [KiaiClient](/docs/kiai.js/classes/KiaiClient) | - |
 | [LeaderboardRoles](/docs/kiai.js/classes/LeaderboardRoles) | - |
 | [Leveling](/docs/kiai.js/classes/Leveling) | - |
+| [LevelUpMessages](/docs/kiai.js/classes/LevelUpMessages) | - |
 | [Misc](/docs/kiai.js/classes/Misc) | - |
 | [Multipliers](/docs/kiai.js/classes/Multipliers) | - |
 | [RequestHandler](/docs/kiai.js/classes/RequestHandler) | This class is used to make requests to the Kiai API, and handles rate limiting and error handling. You can technically use this class directly, but it's recommended to use the client instead. |
@@ -24,33 +21,73 @@ title: kiai.js
 
 ## Type Aliases
 
-| Type alias | Description |
+| Type Alias | Description |
 | ------ | ------ |
-| [APIResponse](/docs/kiai.js/type-aliases/APIResponse) | Base response types |
-| [ApplicationPermission](/docs/kiai.js/type-aliases/ApplicationPermission) | Auth types |
-| [BaseMultiplier](/docs/kiai.js/type-aliases/BaseMultiplier) | Multiplier types |
-| [BaseReward](/docs/kiai.js/type-aliases/BaseReward) | Reward types |
-| [ChannelMultiplier](/docs/kiai.js/type-aliases/ChannelMultiplier) | - |
+| [ApiDate](/docs/kiai.js/type-aliases/ApiDate) | Shared types |
+| [APIResponse](/docs/kiai.js/type-aliases/APIResponse) | - |
+| [ApplicationPermission](/docs/kiai.js/type-aliases/ApplicationPermission) | - |
+| [AutoLeaderboard](/docs/kiai.js/type-aliases/AutoLeaderboard) | - |
+| [BlacklistStatus](/docs/kiai.js/type-aliases/BlacklistStatus) | - |
+| [~~ChannelMultiplier~~](/docs/kiai.js/type-aliases/ChannelMultiplier) | - |
+| [ClearCooldownsResponse](/docs/kiai.js/type-aliases/ClearCooldownsResponse) | - |
+| [CooldownOverride](/docs/kiai.js/type-aliases/CooldownOverride) | - |
+| [CooldownsResponse](/docs/kiai.js/type-aliases/CooldownsResponse) | - |
 | [CountResponse](/docs/kiai.js/type-aliases/CountResponse) | - |
-| [DenylistEntry](/docs/kiai.js/type-aliases/DenylistEntry) | Denylist types |
+| [CreateAutoLeaderboard](/docs/kiai.js/type-aliases/CreateAutoLeaderboard) | - |
+| [CreateMultiplier](/docs/kiai.js/type-aliases/CreateMultiplier) | - |
+| [CreateReward](/docs/kiai.js/type-aliases/CreateReward) | - |
+| [DeletedDenylistEntry](/docs/kiai.js/type-aliases/DeletedDenylistEntry) | - |
+| [DenylistCreateType](/docs/kiai.js/type-aliases/DenylistCreateType) | - |
+| [DenylistEntry](/docs/kiai.js/type-aliases/DenylistEntry) | - |
 | [Denylists](/docs/kiai.js/type-aliases/Denylists) | - |
-| [ErrorResponse](/docs/kiai.js/type-aliases/ErrorResponse) | Error types |
-| [GuildMultiplier](/docs/kiai.js/type-aliases/GuildMultiplier) | - |
+| [DenylistType](/docs/kiai.js/type-aliases/DenylistType) | - |
+| [ErrorResponse](/docs/kiai.js/type-aliases/ErrorResponse) | - |
+| [FeaturePreview](/docs/kiai.js/type-aliases/FeaturePreview) | - |
+| [GlobalMultiplierResponse](/docs/kiai.js/type-aliases/GlobalMultiplierResponse) | - |
+| [GuildExport](/docs/kiai.js/type-aliases/GuildExport) | - |
+| [GuildExportResponse](/docs/kiai.js/type-aliases/GuildExportResponse) | - |
 | [GuildSettings](/docs/kiai.js/type-aliases/GuildSettings) | - |
+| [GuildStats](/docs/kiai.js/type-aliases/GuildStats) | - |
 | [Leaderboard](/docs/kiai.js/type-aliases/Leaderboard) | - |
-| [LeaderboardRole](/docs/kiai.js/type-aliases/LeaderboardRole) | Leaderboard Role types |
-| [LevelData](/docs/kiai.js/type-aliases/LevelData) | Leveling types |
+| [LeaderboardEntry](/docs/kiai.js/type-aliases/LeaderboardEntry) | - |
+| [LeaderboardOptions](/docs/kiai.js/type-aliases/LeaderboardOptions) | - |
+| [LeaderboardRole](/docs/kiai.js/type-aliases/LeaderboardRole) | - |
+| [LeaderboardTime](/docs/kiai.js/type-aliases/LeaderboardTime) | - |
+| [LeaderboardType](/docs/kiai.js/type-aliases/LeaderboardType) | - |
+| [LevelData](/docs/kiai.js/type-aliases/LevelData) | - |
+| [LevelExport](/docs/kiai.js/type-aliases/LevelExport) | - |
+| [LevelUpMessage](/docs/kiai.js/type-aliases/LevelUpMessage) | - |
 | [MeResponse](/docs/kiai.js/type-aliases/MeResponse) | - |
 | [MessageReward](/docs/kiai.js/type-aliases/MessageReward) | - |
+| [MessageRewardConfig](/docs/kiai.js/type-aliases/MessageRewardConfig) | - |
 | [MoneyReward](/docs/kiai.js/type-aliases/MoneyReward) | - |
+| [MoneyRewardConfig](/docs/kiai.js/type-aliases/MoneyRewardConfig) | - |
 | [Multiplier](/docs/kiai.js/type-aliases/Multiplier) | - |
 | [MultiplierResponse](/docs/kiai.js/type-aliases/MultiplierResponse) | - |
+| [NicknameReward](/docs/kiai.js/type-aliases/NicknameReward) | - |
+| [NicknameRewardConfig](/docs/kiai.js/type-aliases/NicknameRewardConfig) | - |
+| [PremiumStatus](/docs/kiai.js/type-aliases/PremiumStatus) | - |
+| [PrestigeResponse](/docs/kiai.js/type-aliases/PrestigeResponse) | - |
+| [QueuedRewardReconciliation](/docs/kiai.js/type-aliases/QueuedRewardReconciliation) | - |
 | [RateLimitError](/docs/kiai.js/type-aliases/RateLimitError) | - |
 | [RatelimitErrorResponse](/docs/kiai.js/type-aliases/RatelimitErrorResponse) | - |
 | [Reward](/docs/kiai.js/type-aliases/Reward) | - |
-| [RoleMultiplier](/docs/kiai.js/type-aliases/RoleMultiplier) | - |
+| [RewardCapabilities](/docs/kiai.js/type-aliases/RewardCapabilities) | - |
+| [RewardDeletionResponse](/docs/kiai.js/type-aliases/RewardDeletionResponse) | - |
+| [RewardEligibility](/docs/kiai.js/type-aliases/RewardEligibility) | - |
+| [RewardReconciliationJob](/docs/kiai.js/type-aliases/RewardReconciliationJob) | - |
+| [RewardThreshold](/docs/kiai.js/type-aliases/RewardThreshold) | - |
+| [RewardType](/docs/kiai.js/type-aliases/RewardType) | - |
+| [~~RoleMultiplier~~](/docs/kiai.js/type-aliases/RoleMultiplier) | - |
 | [RoleReward](/docs/kiai.js/type-aliases/RoleReward) | - |
+| [RoleRewardConfig](/docs/kiai.js/type-aliases/RoleRewardConfig) | - |
 | [RootResponse](/docs/kiai.js/type-aliases/RootResponse) | - |
+| [SetRoleCooldownResponse](/docs/kiai.js/type-aliases/SetRoleCooldownResponse) | - |
+| [SetServerCooldownResponse](/docs/kiai.js/type-aliases/SetServerCooldownResponse) | - |
 | [SuccessResponse](/docs/kiai.js/type-aliases/SuccessResponse) | - |
-| [VirtualMessage](/docs/kiai.js/type-aliases/VirtualMessage) | Virtual message types |
-| [XpDropClaimAction](/docs/kiai.js/type-aliases/XpDropClaimAction) | Settings types |
+| [SyncLeaderboardRolesResponse](/docs/kiai.js/type-aliases/SyncLeaderboardRolesResponse) | - |
+| [VirtualMessage](/docs/kiai.js/type-aliases/VirtualMessage) | - |
+| [WebhookReward](/docs/kiai.js/type-aliases/WebhookReward) | - |
+| [WebhookRewardConfig](/docs/kiai.js/type-aliases/WebhookRewardConfig) | - |
+| [XpDropClaimAction](/docs/kiai.js/type-aliases/XpDropClaimAction) | - |
+| [XpDropResponse](/docs/kiai.js/type-aliases/XpDropResponse) | - |

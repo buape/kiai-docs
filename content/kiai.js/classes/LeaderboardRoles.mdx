@@ -8,9 +8,9 @@ title: LeaderboardRoles
 
 ## Constructors
 
-### new LeaderboardRoles()
+### Constructor
 
-> **new LeaderboardRoles**(`handler`): [`LeaderboardRoles`](/docs/kiai.js/classes/LeaderboardRoles)
+> **new LeaderboardRoles**(`handler`): `LeaderboardRoles`
 
 #### Parameters
 
@@ -20,7 +20,7 @@ title: LeaderboardRoles
 
 #### Returns
 
-[`LeaderboardRoles`](/docs/kiai.js/classes/LeaderboardRoles)
+`LeaderboardRoles`
 
 #### Inherited from
 
@@ -30,25 +30,23 @@ title: LeaderboardRoles
 
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
-| <a id="_handler"></a> `_handler` | `public` | [`RequestHandler`](/docs/kiai.js/classes/RequestHandler) | `BaseHandler._handler` |
+| <a id="property-_handler"></a> `_handler` | `public` | [`RequestHandler`](/docs/kiai.js/classes/RequestHandler) | `BaseHandler._handler` |
 
 ## Methods
 
 ### clearLeaderboardRoles()
 
-> **clearLeaderboardRoles**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/docs/kiai.js/type-aliases/SuccessResponse)\>
-
-Delete all leaderboard roles for a guild
+> **clearLeaderboardRoles**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/docs/kiai.js/type-aliases/CountResponse)\>
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `guildId` | `string` | The guild ID to delete roles from |
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/docs/kiai.js/type-aliases/SuccessResponse)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/docs/kiai.js/type-aliases/CountResponse)\>
 
 ***
 
@@ -56,14 +54,12 @@ Delete all leaderboard roles for a guild
 
 > **createLeaderboardRole**(`guildId`, `data`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/docs/kiai.js/type-aliases/SuccessResponse)\>
 
-Create a new leaderboard role
-
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `guildId` | `string` | The guild ID to create the role in |
-| `data` | [`Omit`](https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys)\<[`LeaderboardRole`](/docs/kiai.js/type-aliases/LeaderboardRole), `"id"` \| `"guildId"`\> | The role data |
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `data` | [`Pick`](https://www.typescriptlang.org/docs/handbook/utility-types.html#picktype-keys)\<[`LeaderboardRole`](/docs/kiai.js/type-aliases/LeaderboardRole), `"roleId"` \| `"type"` \| `"time"`\> |
 
 #### Returns
 
@@ -75,14 +71,12 @@ Create a new leaderboard role
 
 > **deleteLeaderboardRole**(`guildId`, `roleId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/docs/kiai.js/type-aliases/SuccessResponse)\>
 
-Delete a specific leaderboard role
-
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `guildId` | `string` | The guild ID the role is in |
-| `roleId` | `string` | The role ID to delete |
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `roleId` | `string` |
 
 #### Returns
 
@@ -94,14 +88,28 @@ Delete a specific leaderboard role
 
 > **getLeaderboardRoles**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`LeaderboardRole`](/docs/kiai.js/type-aliases/LeaderboardRole)[]\>
 
-Get all leaderboard roles for a guild
-
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `guildId` | `string` | The guild ID to get roles for |
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
 
 #### Returns
 
 [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`LeaderboardRole`](/docs/kiai.js/type-aliases/LeaderboardRole)[]\>
+
+***
+
+### syncLeaderboardRoles()
+
+> **syncLeaderboardRoles**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SyncLeaderboardRolesResponse`](/docs/kiai.js/type-aliases/SyncLeaderboardRolesResponse)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SyncLeaderboardRolesResponse`](/docs/kiai.js/type-aliases/SyncLeaderboardRolesResponse)\>

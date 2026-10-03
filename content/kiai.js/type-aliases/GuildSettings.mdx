@@ -2,57 +2,394 @@
 title: GuildSettings
 ---
 
-> **GuildSettings**: `object`
+> **GuildSettings** = `object`
 
-## Type declaration
+## Properties
 
-| Name | Type |
-| ------ | ------ |
-| <a id="autodeletelevelupmessages"></a> `autoDeleteLevelUpMessages` | `boolean` |
-| <a id="cooldown"></a> `cooldown` | `number` |
-| <a id="globalmulti"></a> `globalMulti` | `number` |
-| <a id="id"></a> `id` | `string` |
-| <a id="leaderboardvanity"></a> `leaderboardVanity` | `string` \| `null` |
-| <a id="levelcap"></a> `levelCap` | `number` \| `null` |
-| <a id="levelupchannel"></a> `levelUpChannel` | `string` \| `null` |
-| <a id="maxxp"></a> `maxXp` | `number` |
-| <a id="messagexpenabled"></a> `messageXpEnabled` | `boolean` |
-| <a id="minxp"></a> `minXp` | `number` |
-| <a id="monthlyleaderboardsenabled"></a> `monthlyLeaderboardsEnabled` | `boolean` |
-| <a id="name"></a> `name` | `string` |
-| <a id="nicknameformat"></a> `nicknameFormat` | `string` \| `null` |
-| <a id="pluralkitenabled"></a> `pluralKitEnabled` | `boolean` |
-| <a id="pluralkitfronteronly"></a> `pluralKitFronterOnly` | `boolean` |
-| <a id="proxytupperboxchannel"></a> `proxyTupperboxChannel` | `string` \| `null` |
-| <a id="rankcardbackground"></a> `rankCardBackground` | `string` \| `null` |
-| <a id="rankcardprimarycolor"></a> `rankCardPrimaryColor` | `string` \| `null` |
-| <a id="rankcardsecondarycolor"></a> `rankCardSecondaryColor` | `string` \| `null` |
-| <a id="resetxponban"></a> `resetXpOnBan` | `boolean` |
-| <a id="resetxponleave"></a> `resetXpOnLeave` | `boolean` |
-| <a id="sendlevelupmessages"></a> `sendLevelUpMessages` | `boolean` |
-| <a id="stackrolerewards"></a> `stackRoleRewards` | `boolean` |
-| <a id="voicexpenabled"></a> `voiceXpEnabled` | `boolean` |
-| <a id="voicexpperminute"></a> `voiceXpPerMinute` | `number` |
-| <a id="voicexpuserminimum"></a> `voiceXpUserMinimum` | `number` |
-| <a id="weeklyleaderboardsenabled"></a> `weeklyLeaderboardsEnabled` | `boolean` |
-| <a id="weekstartsonmonday"></a> `weekStartsOnMonday` | `boolean` |
-| <a id="xpdecayamount"></a> `xpDecayAmount` | `number` |
-| <a id="xpdecayenabled"></a> `xpDecayEnabled` | `boolean` |
-| <a id="xpdecayinterval"></a> `xpDecayInterval` | `number` |
-| <a id="xpdropamount"></a> `xpDropAmount` | `number` |
-| <a id="xpdropclaimaction"></a> `xpDropClaimAction` | [`XpDropClaimAction`](/docs/kiai.js/type-aliases/XpDropClaimAction) |
-| <a id="xpdropcount"></a> `xpDropCount` | `number` |
-| <a id="xpdropenabled"></a> `xpDropEnabled` | `boolean` |
-| <a id="xpdropexpiresafter"></a> `xpDropExpiresAfter` | `number` |
-| <a id="xpdroplastdrop"></a> `xpDropLastDrop` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) \| `null` |
-| <a id="xpdropmessage"></a> `xpDropMessage` | `string` |
-| <a id="xpdroptimebetweendrops"></a> `xpDropTimeBetweenDrops` | `number` |
-| <a id="xpdropxpmax"></a> `xpDropXpMax` | `number` |
-| <a id="xpdropxpmin"></a> `xpDropXpMin` | `number` |
-| <a id="xpformula"></a> `xpFormula` | `string` |
-| <a id="xpstreakbonus"></a> `xpStreakBonus` | `number` |
-| <a id="xpstreakchannel"></a> `xpStreakChannel` | `string` \| `null` |
-| <a id="xpstreakdayrequired"></a> `xpStreakDayRequired` | `number` |
-| <a id="xpstreakenabled"></a> `xpStreakEnabled` | `boolean` |
-| <a id="xpstreakmessage"></a> `xpStreakMessage` | `string` |
-| <a id="xpstreakmindays"></a> `xpStreakMinDays` | `number` |
+### alwaysEphemeral
+
+> **alwaysEphemeral**: `boolean`
+
+***
+
+### autoDeleteLevelUpMessages
+
+> **autoDeleteLevelUpMessages**: `boolean`
+
+***
+
+### cooldown
+
+> **cooldown**: `number`
+
+***
+
+### id
+
+> **id**: `string`
+
+***
+
+### leaderboardThumbnail
+
+> **leaderboardThumbnail**: `boolean`
+
+***
+
+### levelCap
+
+> **levelCap**: `number` \| `null`
+
+***
+
+### levelUpChannel
+
+> **levelUpChannel**: `string` \| `null`
+
+***
+
+### maxXp
+
+> **maxXp**: `number`
+
+***
+
+### messageXpEnabled
+
+> **messageXpEnabled**: `boolean`
+
+***
+
+### minXp
+
+> **minXp**: `number`
+
+***
+
+### monthlyLeaderboardsEnabled
+
+> **monthlyLeaderboardsEnabled**: `boolean`
+
+***
+
+### nicknameFormat
+
+> **nicknameFormat**: `string` \| `null`
+
+***
+
+### pluralBuddyEnabled
+
+> **pluralBuddyEnabled**: `boolean`
+
+***
+
+### pluralGgEnabled
+
+> **pluralGgEnabled**: `boolean`
+
+***
+
+### pluralKitEnabled
+
+> **pluralKitEnabled**: `boolean`
+
+***
+
+### pluralKitFronterOnly
+
+> **pluralKitFronterOnly**: `boolean`
+
+***
+
+### prestigeAutomatic
+
+> **prestigeAutomatic**: `boolean`
+
+***
+
+### prestigeCustomName
+
+> **prestigeCustomName**: `string` \| `null`
+
+***
+
+### prestigeEnabled
+
+> **prestigeEnabled**: `boolean`
+
+***
+
+### prestigeRequirementFormula
+
+> **prestigeRequirementFormula**: `string`
+
+***
+
+### privateThreadXpEnabled
+
+> **privateThreadXpEnabled**: `boolean`
+
+***
+
+### proxyTupperboxChannel
+
+> **proxyTupperboxChannel**: `string` \| `null`
+
+***
+
+### rankCardBackground
+
+> **rankCardBackground**: `string` \| `null`
+
+***
+
+### rankCardPrimaryColor
+
+> **rankCardPrimaryColor**: `string` \| `null`
+
+***
+
+### rankCardSecondaryColor
+
+> **rankCardSecondaryColor**: `string` \| `null`
+
+***
+
+### rankCardTotalXp
+
+> **rankCardTotalXp**: `boolean`
+
+***
+
+### reactionXpDailyMax
+
+> **reactionXpDailyMax**: `number`
+
+***
+
+### reactionXpEnabled
+
+> **reactionXpEnabled**: `boolean`
+
+***
+
+### reactionXpGiven
+
+> **reactionXpGiven**: `number`
+
+***
+
+### reactionXpGivenSuper
+
+> **reactionXpGivenSuper**: `number`
+
+***
+
+### reactionXpReceived
+
+> **reactionXpReceived**: `number`
+
+***
+
+### reactionXpReceivedSuper
+
+> **reactionXpReceivedSuper**: `number`
+
+***
+
+### resetXpOnBan
+
+> **resetXpOnBan**: `boolean`
+
+***
+
+### resetXpOnLeave
+
+> **resetXpOnLeave**: `boolean`
+
+***
+
+### reverseMoneyRewardsOnLevelDown
+
+> **reverseMoneyRewardsOnLevelDown**: `boolean`
+
+***
+
+### reverseNicknameRewardsOnLevelDown
+
+> **reverseNicknameRewardsOnLevelDown**: `boolean`
+
+***
+
+### reverseRoleRewardsOnLevelDown
+
+> **reverseRoleRewardsOnLevelDown**: `boolean`
+
+***
+
+### sendLevelUpMessages
+
+> **sendLevelUpMessages**: `boolean`
+
+***
+
+### showNextRoleReward
+
+> **showNextRoleReward**: `boolean`
+
+***
+
+### stackRoleRewards
+
+> **stackRoleRewards**: `boolean`
+
+***
+
+### voiceXpEnabled
+
+> **voiceXpEnabled**: `boolean`
+
+***
+
+### voiceXpPerMinute
+
+> **voiceXpPerMinute**: `number`
+
+***
+
+### voiceXpUserMinimum
+
+> **voiceXpUserMinimum**: `number`
+
+***
+
+### weeklyLeaderboardsEnabled
+
+> **weeklyLeaderboardsEnabled**: `boolean`
+
+***
+
+### weekStartsOnMonday
+
+> **weekStartsOnMonday**: `boolean`
+
+***
+
+### xpDecayAmount
+
+> **xpDecayAmount**: `number`
+
+***
+
+### xpDecayEnabled
+
+> **xpDecayEnabled**: `boolean`
+
+***
+
+### xpDecayInterval
+
+> **xpDecayInterval**: `number`
+
+***
+
+### xpDropAmount
+
+> **xpDropAmount**: `number`
+
+***
+
+### xpDropClaimAction
+
+> **xpDropClaimAction**: [`XpDropClaimAction`](/docs/kiai.js/type-aliases/XpDropClaimAction)
+
+***
+
+### xpDropEnabled
+
+> **xpDropEnabled**: `boolean`
+
+***
+
+### xpDropExpiresAfter
+
+> **xpDropExpiresAfter**: `number`
+
+***
+
+### xpDropMessageKitData
+
+> **xpDropMessageKitData**: `unknown`
+
+***
+
+### xpDropTimeBetweenDropsMax
+
+> **xpDropTimeBetweenDropsMax**: `number`
+
+***
+
+### xpDropTimeBetweenDropsMin
+
+> **xpDropTimeBetweenDropsMin**: `number`
+
+***
+
+### xpDropXpMax
+
+> **xpDropXpMax**: `number`
+
+***
+
+### xpDropXpMin
+
+> **xpDropXpMin**: `number`
+
+***
+
+### xpFormula
+
+> **xpFormula**: `string`
+
+***
+
+### xpStreakBonus
+
+> **xpStreakBonus**: `number`
+
+***
+
+### xpStreakChannel
+
+> **xpStreakChannel**: `string` \| `null`
+
+***
+
+### xpStreakDayRequired
+
+> **xpStreakDayRequired**: `number`
+
+***
+
+### xpStreakEnabled
+
+> **xpStreakEnabled**: `boolean`
+
+***
+
+### xpStreakMessage
+
+> **xpStreakMessage**: `string`
+
+***
+
+### xpStreakMinDays
+
+> **xpStreakMinDays**: `number`
+
+***
+
+### xpStreakSendMessage
+
+> **xpStreakSendMessage**: `boolean`

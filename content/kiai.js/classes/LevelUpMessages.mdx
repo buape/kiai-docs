@@ -1,0 +1,82 @@
+---
+title: LevelUpMessages
+---
+
+## Extends
+
+- `BaseHandler`
+
+## Constructors
+
+### Constructor
+
+> **new LevelUpMessages**(`handler`): `LevelUpMessages`
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `handler` | [`RequestHandler`](/docs/kiai.js/classes/RequestHandler) |
+
+#### Returns
+
+`LevelUpMessages`
+
+#### Inherited from
+
+`BaseHandler.constructor`
+
+## Properties
+
+| Property | Modifier | Type | Inherited from |
+| ------ | ------ | ------ | ------ |
+| <a id="property-_handler"></a> `_handler` | `public` | [`RequestHandler`](/docs/kiai.js/classes/RequestHandler) | `BaseHandler._handler` |
+
+## Methods
+
+### getBaseLevelUpMessage()
+
+> **getBaseLevelUpMessage**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`LevelUpMessage`](/docs/kiai.js/type-aliases/LevelUpMessage)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`LevelUpMessage`](/docs/kiai.js/type-aliases/LevelUpMessage)\>
+
+***
+
+### getLevelUpMessage()
+
+> **getLevelUpMessage**(`guildId`, `level`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`LevelUpMessage`](/docs/kiai.js/type-aliases/LevelUpMessage)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `level` | `number` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`LevelUpMessage`](/docs/kiai.js/type-aliases/LevelUpMessage)\>
+
+***
+
+### getLevelUpMessages()
+
+> **getLevelUpMessages**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`LevelUpMessage`](/docs/kiai.js/type-aliases/LevelUpMessage)[]\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`LevelUpMessage`](/docs/kiai.js/type-aliases/LevelUpMessage)[]\>

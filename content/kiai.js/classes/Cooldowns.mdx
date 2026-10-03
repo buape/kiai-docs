@@ -1,0 +1,152 @@
+---
+title: Cooldowns
+---
+
+## Extends
+
+- `BaseHandler`
+
+## Constructors
+
+### Constructor
+
+> **new Cooldowns**(`handler`): `Cooldowns`
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `handler` | [`RequestHandler`](/docs/kiai.js/classes/RequestHandler) |
+
+#### Returns
+
+`Cooldowns`
+
+#### Inherited from
+
+`BaseHandler.constructor`
+
+## Properties
+
+| Property | Modifier | Type | Inherited from |
+| ------ | ------ | ------ | ------ |
+| <a id="property-_handler"></a> `_handler` | `public` | [`RequestHandler`](/docs/kiai.js/classes/RequestHandler) | `BaseHandler._handler` |
+
+## Methods
+
+### clearAllCooldowns()
+
+> **clearAllCooldowns**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`ClearCooldownsResponse`](/docs/kiai.js/type-aliases/ClearCooldownsResponse)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`ClearCooldownsResponse`](/docs/kiai.js/type-aliases/ClearCooldownsResponse)\>
+
+***
+
+### clearRoleCooldown()
+
+> **clearRoleCooldown**(`guildId`, `roleId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CooldownOverride`](/docs/kiai.js/type-aliases/CooldownOverride)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `roleId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CooldownOverride`](/docs/kiai.js/type-aliases/CooldownOverride)\>
+
+***
+
+### clearServerCooldown()
+
+> **clearServerCooldown**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SetServerCooldownResponse`](/docs/kiai.js/type-aliases/SetServerCooldownResponse)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SetServerCooldownResponse`](/docs/kiai.js/type-aliases/SetServerCooldownResponse)\>
+
+***
+
+### getCooldowns()
+
+> **getCooldowns**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CooldownsResponse`](/docs/kiai.js/type-aliases/CooldownsResponse)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CooldownsResponse`](/docs/kiai.js/type-aliases/CooldownsResponse)\>
+
+***
+
+### getRoleCooldown()
+
+> **getRoleCooldown**(`guildId`, `roleId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CooldownOverride`](/docs/kiai.js/type-aliases/CooldownOverride)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `roleId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CooldownOverride`](/docs/kiai.js/type-aliases/CooldownOverride)\>
+
+***
+
+### setRoleCooldown()
+
+> **setRoleCooldown**(`guildId`, `roleId`, `data`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CooldownOverride`](/docs/kiai.js/type-aliases/CooldownOverride)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `roleId` | `string` |
+| `data` | \{ `cooldown`: `number`; `expiresAt?`: `string` \| `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date); \} |
+| `data.cooldown` | `number` |
+| `data.expiresAt?` | `string` \| `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CooldownOverride`](/docs/kiai.js/type-aliases/CooldownOverride)\>
+
+***
+
+### setServerCooldown()
+
+> **setServerCooldown**(`guildId`, `cooldown`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SetServerCooldownResponse`](/docs/kiai.js/type-aliases/SetServerCooldownResponse)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `cooldown` | `number` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SetServerCooldownResponse`](/docs/kiai.js/type-aliases/SetServerCooldownResponse)\>

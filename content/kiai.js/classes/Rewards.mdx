@@ -8,9 +8,9 @@ title: Rewards
 
 ## Constructors
 
-### new Rewards()
+### Constructor
 
-> **new Rewards**(`handler`): [`Rewards`](/docs/kiai.js/classes/Rewards)
+> **new Rewards**(`handler`): `Rewards`
 
 #### Parameters
 
@@ -20,7 +20,7 @@ title: Rewards
 
 #### Returns
 
-[`Rewards`](/docs/kiai.js/classes/Rewards)
+`Rewards`
 
 #### Inherited from
 
@@ -30,13 +30,13 @@ title: Rewards
 
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
-| <a id="_handler"></a> `_handler` | `public` | [`RequestHandler`](/docs/kiai.js/classes/RequestHandler) | `BaseHandler._handler` |
+| <a id="property-_handler"></a> `_handler` | `public` | [`RequestHandler`](/docs/kiai.js/classes/RequestHandler) | `BaseHandler._handler` |
 
 ## Methods
 
 ### clearRewards()
 
-> **clearRewards**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/docs/kiai.js/type-aliases/SuccessResponse) & [`CountResponse`](/docs/kiai.js/type-aliases/CountResponse)\>
+> **clearRewards**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/docs/kiai.js/type-aliases/CountResponse)\>
 
 #### Parameters
 
@@ -46,47 +46,117 @@ title: Rewards
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/docs/kiai.js/type-aliases/SuccessResponse) & [`CountResponse`](/docs/kiai.js/type-aliases/CountResponse)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/docs/kiai.js/type-aliases/CountResponse)\>
 
 ***
 
 ### createReward()
 
-> **createReward**(`guildId`, `data`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<\{ `id`: `string`; \}\>
+> **createReward**(`guildId`, `data`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Reward`](/docs/kiai.js/type-aliases/Reward)\>
 
 #### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
 | `guildId` | `string` |
-| `data` | [`Omit`](https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys)\<[`Reward`](/docs/kiai.js/type-aliases/Reward), `"id"`\> |
+| `data` | [`CreateReward`](/docs/kiai.js/type-aliases/CreateReward) |
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<\{ `id`: `string`; \}\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Reward`](/docs/kiai.js/type-aliases/Reward)\>
 
 ***
 
 ### deleteReward()
 
-> **deleteReward**(`guildId`, `id`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/docs/kiai.js/type-aliases/SuccessResponse)\>
+> **deleteReward**(`guildId`, `rewardId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RewardDeletionResponse`](/docs/kiai.js/type-aliases/RewardDeletionResponse)\>
 
 #### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
 | `guildId` | `string` |
-| `id` | `string` |
+| `rewardId` | `string` |
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`SuccessResponse`](/docs/kiai.js/type-aliases/SuccessResponse)\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RewardDeletionResponse`](/docs/kiai.js/type-aliases/RewardDeletionResponse)\>
+
+***
+
+### getCapabilities()
+
+> **getCapabilities**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RewardCapabilities`](/docs/kiai.js/type-aliases/RewardCapabilities)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RewardCapabilities`](/docs/kiai.js/type-aliases/RewardCapabilities)\>
+
+***
+
+### getReconciliationJob()
+
+> **getReconciliationJob**(`guildId`, `jobId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RewardReconciliationJob`](/docs/kiai.js/type-aliases/RewardReconciliationJob)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `jobId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RewardReconciliationJob`](/docs/kiai.js/type-aliases/RewardReconciliationJob)\>
+
+***
+
+### getReward()
+
+> **getReward**(`guildId`, `rewardId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Reward`](/docs/kiai.js/type-aliases/Reward)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `rewardId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Reward`](/docs/kiai.js/type-aliases/Reward)\>
 
 ***
 
 ### getRewards()
 
-> **getRewards**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Reward`](/docs/kiai.js/type-aliases/Reward)[]\>
+> **getRewards**(`guildId`, `filters?`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Reward`](/docs/kiai.js/type-aliases/Reward)[]\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `filters` | \{ `level?`: `number`; `prestige?`: `number`; `type?`: [`RewardType`](/docs/kiai.js/type-aliases/RewardType); \} |
+| `filters.level?` | `number` |
+| `filters.prestige?` | `number` |
+| `filters.type?` | [`RewardType`](/docs/kiai.js/type-aliases/RewardType) |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Reward`](/docs/kiai.js/type-aliases/Reward)[]\>
+
+***
+
+### queueReconciliation()
+
+> **queueReconciliation**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`QueuedRewardReconciliation`](/docs/kiai.js/type-aliases/QueuedRewardReconciliation)\>
 
 #### Parameters
 
@@ -96,4 +166,22 @@ title: Rewards
 
 #### Returns
 
-[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Reward`](/docs/kiai.js/type-aliases/Reward)[]\>
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`QueuedRewardReconciliation`](/docs/kiai.js/type-aliases/QueuedRewardReconciliation)\>
+
+***
+
+### updateReward()
+
+> **updateReward**(`guildId`, `rewardId`, `data`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Reward`](/docs/kiai.js/type-aliases/Reward)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `rewardId` | `string` |
+| `data` | [`CreateReward`](/docs/kiai.js/type-aliases/CreateReward) |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Reward`](/docs/kiai.js/type-aliases/Reward)\>
