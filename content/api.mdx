@@ -25,7 +25,7 @@ Every endpoint is scoped to a server (`guildId`) and requires a specific permiss
 | GET, POST, DELETE | `/api/v3/:guildId/denylist` | Denylist |
 | GET, POST, DELETE | `/api/v3/:guildId/multipliers` | Multipliers |
 | GET, DELETE | `/api/v3/:guildId/rewards/:rewardId` | Rewards |
-| POST | `/api/v3/:guldId/rewards` | Rewards |
+| POST | `/api/v3/:guildId/rewards` | Rewards |
 | GET, POST, DELETE | `/api/v3/:guildId/leaderboard-roles` | Rewards |
 
 `GET /api/v3/me` returns your application's own ID, owning user, rate limit, and the list of permissions it holds in each authorized server. Use it to confirm your token works and to check what it can do.
@@ -68,13 +68,17 @@ Kiai stores permissions as an integer, with each permission assigned to one bit.
 
 | Permission Name | Description | Bit | Value |
 | --------------- | ------------------------------------ | --- | ------ |
-| Levels          | View and edit all levels and XP      | 0 | `0x0001` |
-| Multipliers     | View and edit multipliers            | 1 | `0x0002` |
-| Export          | Export data from your server         | 2 | `0x0004` |
-| Denylist        | View and edit the server's denylist  | 3 | `0x0008` |
-| Rewards         | View and edit the server's rewards and leaderboard position roles | 4 | `0x0010` |
+| Levels | Access XP data, leaderboards, prestige, and server stats | 0 | `0x0001` |
+| Multipliers | Manage XP multipliers | 1 | `0x0002` |
+| Export | Export server leveling data | 2 | `0x0004` |
+| Denylist | Manage the server's level denylists | 3 | `0x0008` |
+| Rewards | Manage leveling rewards, trigger reward sync, and manage leaderboard roles | 4 | `0x0010` |
+| Cooldowns | Manage XP cooldowns | 5 | `0x0020` |
+| XP Drops | Trigger manual XP drops | 6 | `0x0040` |
+| Level-Up Messages | Read level-up message configuration | 7 | `0x0080` |
+| Auto Leaderboards | Manage automatic leaderboard posts | 8 | `0x0100` |
 
-The value for every permission combined is `0x001F`.
+The value for every permission combined is `0x01FF`.
 
 ---
 
