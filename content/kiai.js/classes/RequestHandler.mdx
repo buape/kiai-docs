@@ -19,8 +19,8 @@ You can technically use this class directly, but it's recommended to use the cli
 | ------ | ------ | ------ |
 | `baseURL` | `string` | `undefined` |
 | `apiKey` | `string` | `undefined` |
-| `debug` | `boolean` | `false` |
-| `fetchFunction` | (`url`, `init?`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Response`](https://developer.mozilla.org/docs/Web/API/Response)\> | `fetch` |
+| `debug?` | `boolean` | `false` |
+| `fetchFunction?` | (`url`, `init?`) => [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`Response`](https://developer.mozilla.org/docs/Web/API/Response)\> | `fetch` |
 
 #### Returns
 
@@ -45,17 +45,17 @@ You can technically use this class directly, but it's recommended to use the cli
 
 | Type Parameter |
 | ------ |
-| `T` |
+| <a id="type-parameter-t"></a> `T` |
 
 #### Parameters
 
 | Parameter | Type | Default value |
 | ------ | ------ | ------ |
 | `endpoint` | `string` | `undefined` |
-| `method` | `"GET"` \| `"POST"` \| `"PATCH"` \| `"PUT"` \| `"DELETE"` | `"GET"` |
-| `query` | [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `string` \| `number` \| `boolean`\> | `{}` |
-| `body` | [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `unknown`\> | `{}` |
-| `noError` | `boolean` | `false` |
+| `method?` | `"GET"` \| `"POST"` \| `"PATCH"` \| `"PUT"` \| `"DELETE"` | `"GET"` |
+| `query?` | [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `string` \| `number` \| `boolean`\> | `{}` |
+| `body?` | [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `unknown`\> | `{}` |
+| `noError?` | `boolean` | `false` |
 | `customBaseUrl?` | `string` | `undefined` |
 
 #### Returns
