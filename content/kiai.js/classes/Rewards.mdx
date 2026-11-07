@@ -34,6 +34,26 @@ title: Rewards
 
 ## Methods
 
+### assignMemberPath()
+
+> **assignMemberPath**(`guildId`, `userId`, `data`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`MemberRewardPathAssignment`](/docs/kiai.js/type-aliases/MemberRewardPathAssignment)\>
+
+Assign a path, optionally checking the member's expected current path.
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `userId` | `string` |
+| `data` | [`AssignMemberRewardPath`](/docs/kiai.js/type-aliases/AssignMemberRewardPath) |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`MemberRewardPathAssignment`](/docs/kiai.js/type-aliases/MemberRewardPathAssignment)\>
+
+***
+
 ### clearRewards()
 
 > **clearRewards**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/docs/kiai.js/type-aliases/CountResponse)\>
@@ -47,6 +67,23 @@ title: Rewards
 #### Returns
 
 [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`CountResponse`](/docs/kiai.js/type-aliases/CountResponse)\>
+
+***
+
+### createPath()
+
+> **createPath**(`guildId`, `data`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RewardPath`](/docs/kiai.js/type-aliases/RewardPath)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `data` | [`CreateRewardPath`](/docs/kiai.js/type-aliases/CreateRewardPath) |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RewardPath`](/docs/kiai.js/type-aliases/RewardPath)\>
 
 ***
 
@@ -97,6 +134,74 @@ title: Rewards
 #### Returns
 
 [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RewardCapabilities`](/docs/kiai.js/type-aliases/RewardCapabilities)\>
+
+***
+
+### getMemberPath()
+
+> **getMemberPath**(`guildId`, `userId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`MemberRewardPath`](/docs/kiai.js/type-aliases/MemberRewardPath)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `userId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`MemberRewardPath`](/docs/kiai.js/type-aliases/MemberRewardPath)\>
+
+***
+
+### getPath()
+
+> **getPath**(`guildId`, `pathId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RewardPath`](/docs/kiai.js/type-aliases/RewardPath)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `pathId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RewardPath`](/docs/kiai.js/type-aliases/RewardPath)\>
+
+***
+
+### getPaths()
+
+> **getPaths**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RewardPath`](/docs/kiai.js/type-aliases/RewardPath)[]\>
+
+List the guild's reward paths.
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RewardPath`](/docs/kiai.js/type-aliases/RewardPath)[]\>
+
+***
+
+### getPathSettings()
+
+> **getPathSettings**(`guildId`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RewardPathSettings`](/docs/kiai.js/type-aliases/RewardPathSettings)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RewardPathSettings`](/docs/kiai.js/type-aliases/RewardPathSettings)\>
 
 ***
 
@@ -167,6 +272,43 @@ title: Rewards
 #### Returns
 
 [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`QueuedRewardReconciliation`](/docs/kiai.js/type-aliases/QueuedRewardReconciliation)\>
+
+***
+
+### replacePath()
+
+> **replacePath**(`guildId`, `pathId`, `data`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RewardPath`](/docs/kiai.js/type-aliases/RewardPath)\>
+
+Replace every editable field. Set archived to true to archive the path.
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `pathId` | `string` |
+| `data` | [`ReplaceRewardPath`](/docs/kiai.js/type-aliases/ReplaceRewardPath) |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RewardPath`](/docs/kiai.js/type-aliases/RewardPath)\>
+
+***
+
+### setPathSettings()
+
+> **setPathSettings**(`guildId`, `data`): [`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RewardPathSettings`](/docs/kiai.js/type-aliases/RewardPathSettings)\>
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `guildId` | `string` |
+| `data` | [`RewardPathSettings`](/docs/kiai.js/type-aliases/RewardPathSettings) |
+
+#### Returns
+
+[`Promise`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)\<[`RewardPathSettings`](/docs/kiai.js/type-aliases/RewardPathSettings)\>
 
 ***
 
