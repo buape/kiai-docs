@@ -39,7 +39,7 @@ For example:
 {user.mention}, {proxy.name} reached level {level}!
 ```
 
-`{user.*}` refers to the linked Discord account; `{proxy.*}` identifies the proxy member. These placeholders work across all supported proxy services, but only in level-up messages, not custom message or nickname rewards.
+`{user.*}` refers to the linked Discord account; `{proxy.*}` identifies the proxy member. These placeholders only work in level-up messages, not custom message or nickname rewards.
 
 For regular Discord users, `{proxy.*}` uses their Discord identity. If a proxy profile is unavailable, the name and avatar fall back to the Discord owner's, while the internal ID stays unchanged. Service-specific defaults still apply, including Tupperbox's generic avatar. See [Placeholders](placeholders.mdx) for the full list and fallback details.
 
