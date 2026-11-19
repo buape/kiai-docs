@@ -20,7 +20,7 @@ Not every placeholder works in every location, since some locations do not have 
 
 | Location | Supported placeholders |
 | --- | --- |
-| Level-up message | `{guild.*}`, `{user.*}`, `{level}`, `{level.new}`, `{level.old}`, `{prestige}`, `{rewards.*}` |
+| Level-up message | `{guild.*}`, `{user.*}`, `{proxy.*}`, `{level}`, `{level.new}`, `{level.old}`, `{prestige}`, `{rewards.*}` |
 | XP Streak message | `{guild.*}`, `{user.*}`, `{streak}`, `{bonus}` |
 | XP Drop message | `{guild.*}`, `{xp}`, `{expire}` |
 | Custom Message reward | `{guild.*}`, `{user.*}`, `{level}`, `{level.new}`, `{level.old}` |
@@ -29,6 +29,14 @@ Not every placeholder works in every location, since some locations do not have 
 `{streak}` and `{bonus}` only work in XP Streak messages. `{expire}` only works in XP Drop messages. Webhook rewards do not support placeholders.
 
 ---
+
+## Proxy Placeholders
+
+Use `{proxy.name}`, `{proxy.id}`, and `{proxy.avatar}` in level-up messages for PluralKit, PluralBuddy, Plural.gg, and Tupperbox identities. `{user.*}` still refers to the linked Discord account, so you can mention the owner and display the proxy's name in the same message.
+
+For regular Discord users, these resolve to their Discord display name (or username), Discord user ID, and avatar. If a proxy's profile cannot be resolved, its name and avatar fall back to the owner's; `{proxy.id}` still contains the full internal proxy ID. Existing service-specific defaults still apply, such as Tupperbox's generic avatar. If neither identity has an avatar, Kiai uses a generic Discord avatar.
+
+See [Proxy Messages](proxy-messages.mdx) for an example.
 
 ## List of Placeholders
 
@@ -47,6 +55,9 @@ Not every placeholder works in every location, since some locations do not have 
 | `{user.discriminator}` | 0 | Discriminators are deprecated on Discord and included here for legacy servers |
 | `{user.color}` | #ff8d00 | The member's Discord profile accent color, in lowercase hex. Resolves to `#` alone if the member has not set one |
 | `{user.avatar}` | `https://cdn.discordapp.com/avatars/439223656200273932/b0fb371b25e6689eff94692c63c0f7a5.png` | Falls back to a generic Discord avatar if the member has none |
+| `{proxy.name}` | Alex | The proxy member's display name or name. Level-up messages only |
+| `{proxy.id}` | `abcde-fghij:pk:439223656200273932` | The full internal Kiai user ID, including the proxy identifier and Discord owner ID. Level-up messages only |
+| `{proxy.avatar}` | `https://cdn.discordapp.com/avatars/439223656200273932/avatar.png` | The proxy member's avatar URL. Level-up messages only |
 | `{xp}` | 100 | Only resolves where XP data is available, such as XP Drop messages |
 | `{level}` | 10 | Same as `{level.new}` |
 | `{level.old}` | 9 | The member's level before this change |
