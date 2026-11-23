@@ -1,0 +1,28 @@
+---
+title: Verification
+description: Only let members verified with Verification.gg earn XP.
+---
+
+# Verification.gg
+
+Kiai integrates with [Verification.gg](https://verification.gg/), a Discord verification bot. With the integration enabled, you can require that members are verified with Verification.gg before they can earn XP from messages, voice activity, reactions, or XP drops.
+
+## Connecting
+
+An admin connects Kiai to Verification.gg from either bot's dashboard:
+
+- **From Verification.gg:** pick Kiai in their integration list for your server.
+- **From Kiai:** admins are redirected to Verification.gg's consent page. After approving, you land back on the dashboard.
+
+The connection is per server, and disconnecting on either side removes it on both.
+
+## Verified-Only XP
+
+Enable **Verification.gg Verified Only XP** in `/settings > Integrations`. When enabled:
+
+- Members who are verified with Verification.gg earn XP as normal.
+- Members who are not verified are treated the same as if they were on the [denylist](denylists.mdx) — they earn no XP from messages, voice activity, reactions, or XP drop claims.
+
+Verification status is checked live and cached briefly, so newly verified members can earn XP right away. If the Verification.gg API is unreachable, XP earning stays enabled rather than locking the whole server out.
+
+The server needs a connected Verification.gg integration for this setting to have an effect. Enable it in advance to enforce verification as soon as the integration is connected.
